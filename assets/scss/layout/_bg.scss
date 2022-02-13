@@ -21,6 +21,22 @@
     margin: 0 auto;
 }
 
+
+/* ---------------------- SUBTITLE ---------------------- */
+
+.subtitle {
+    width: 100%;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(8, 144, 122, 1) 10%, rgba(8, 144, 122, 1) 50%, rgba(8, 144, 122, 1) 90%, rgba(255, 255, 255, 1) 100%);
+    padding: 0rem 0px 1rem;
+    h2 {
+        color: $color-secundario;
+        font-size: 3.7rem;
+        font-weight: 900;
+    }
+}
+
 @media screen and (min-width:1200px) {
     .container-evulus {
         padding: 80px;
@@ -33,12 +49,22 @@
         padding: 80px 60px;
         width: 100%;
     }
+    .subtitle {
+        h2 {
+            font-size: 3rem;
+        }
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:992px) {
     .container-evulus {
         padding: 80px 40px;
         width: 100%;
+    }
+    .subtitle {
+        h2 {
+            font-size: 2.5rem;
+        }
     }
 }
 
@@ -49,6 +75,12 @@
     }
     .w-80 {
         width: 90%;
+    }
+    .subtitle {
+        padding: 0px 0px .3rem;
+        h2 {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -69,22 +101,6 @@
         -moz-border-radius: 40px;
         -ms-border-radius: 40px;
         -o-border-radius: 40px;
-    }
-}
-
-
-/* ---------------------- SUBTITLE ---------------------- */
-
-.subtitle {
-    width: 100%;
-    text-align: center;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(8, 144, 122, 1) 10%, rgba(8, 144, 122, 1) 50%, rgba(8, 144, 122, 1) 90%, rgba(255, 255, 255, 1) 100%);
-    padding: 0rem 0px 1rem;
-    h2 {
-        color: $color-secundario;
-        font-size: 3.7rem;
-        font-weight: 900;
     }
 }
 
