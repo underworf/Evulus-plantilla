@@ -1,0 +1,9 @@
+.footer {
+    color: $color-secundario;
+    &__content {
+        h5 {
+            margin-top: 20px;
+            font-weight: bolder;
+        }
+    }
+}

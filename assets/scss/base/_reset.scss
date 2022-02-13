@@ -1,12 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600;700;800;900&display=swap');
 * {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    vertical-align: baseline;
 }
 
-img,
 video,
 picture,
 iframe,
@@ -16,9 +15,17 @@ figure {
     display: block;
 }
 
+input {
+    outline: none;
+}
+
 a {
     display: block;
     text-decoration: none;
+    color: $color-secundario;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 ul {
@@ -33,5 +40,9 @@ html {
 
 body {
     min-height: 100vh;
-    // font-family: ;
+    font-family: 'GalanoGrotesque';
+}
+
+section {
+    overflow-x: hidden;
 }

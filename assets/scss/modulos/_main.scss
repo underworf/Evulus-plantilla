@@ -1,0 +1,186 @@
+/* ----------------------- EVULUS ----------------------- */
+
+.evulus {
+    min-height: 100vh;
+    margin-top: 100px;
+    background: url(../img/mapabg.svg) no-repeat;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 100%;
+        &__text {
+            h1 {
+                font-size: 4.2rem;
+                span {
+                    color: $color-principal;
+                }
+            }
+            p {
+                font-size: 1.8em;
+                line-height: 2rem;
+            }
+        }
+        .evulus-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+                width: calc(100% / 3 - 30px);
+                // min-width: 100px;
+                background: $color-secundario;
+                padding: .5rem 1rem;
+                margin: 10px;
+                display: flex;
+                @include sombra-primaria;
+                align-items: center;
+                transition: all 500ms;
+                -webkit-transition: all 500ms;
+                -moz-transition: all 500ms;
+                -ms-transition: all 500ms;
+                -o-transition: all 500ms;
+                &:hover {
+                    background: #f2f2f2;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .evulus {
+        background-repeat: repeat;
+    }
+}
+
+
+/* --------------------- EVU TOKENS --------------------- */
+
+.evu-tokens {
+    &__head {
+        background: url(../img/mapabg-green.svg) no-repeat center;
+    }
+}
+
+.clipboard {
+    width: 200px;
+    background: transparent;
+}
+
+.copy {
+    background: $color-btn;
+}
+
+
+/* -------------------- CRYPTO-ASSETS ------------------- */
+
+article {
+    line-height: 2rem;
+    text-align: justify;
+    font-size: 1.9em;
+    h3 {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+}
+
+
+/* ---------------------- EXCHANGES --------------------- */
+
+.exchanges {
+    &__populate {
+        height: 300px;
+        a {
+            width: 400px;
+            height: 150px;
+            background: $color-secundario;
+            @include sombra-primaria;
+        }
+    }
+    &__platform {
+        height: 200px;
+        margin-bottom: 20px;
+        a {
+            width: 100px;
+            height: 100px;
+            background: $color-secundario;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+    }
+}
+
+
+/* ----------------------- SERVICE ---------------------- */
+
+.service {
+    .service-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 40px;
+        justify-content: center;
+        a {
+            width: calc(100% / 4 - 40px);
+            min-width: 200px;
+            height: 200px;
+            @include sombra-secudaria;
+            transition: all 300ms;
+            -webkit-transition: all 300ms;
+            -moz-transition: all 300ms;
+            -ms-transition: all 300ms;
+            -o-transition: all 300ms;
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
+            &:hover {
+                background: $color-hover;
+            }
+        }
+    }
+}
+
+
+/* ---------------------- ROAD MAP ---------------------- */
+
+.road-map {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .transactions {
+            div {
+                text-size-adjust: initial;
+                h5 {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* ----------------------- CONTACT ---------------------- */
+
+.contact {
+    color: $color-secundario;
+    text-align: center;
+    position: relative;
+    &__content {
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p:nth-child(2) {
+            font-size: 3rem;
+        }
+    }
+}
