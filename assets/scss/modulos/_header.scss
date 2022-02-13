@@ -114,7 +114,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     .nav_principal {
         flex-direction: column;
         li {
@@ -150,6 +150,7 @@
         -moz-transition: all 1s ease-in-out;
         -ms-transition: all 1s ease-in-out;
         -o-transition: all 1s ease-in-out;
+        overflow-x: scroll;
         .close {
             display: flex;
             width: 100%;

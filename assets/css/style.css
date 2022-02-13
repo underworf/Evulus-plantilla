@@ -48,6 +48,10 @@ section {
   overflow-x: hidden;
 }
 
+.row {
+  margin: 0;
+}
+
 @font-face {
   font-family: "GalanoGrotesque";
   src: url(../fonts/Galano-Grotesque-Light.ttf) format("truetype");
@@ -130,7 +134,7 @@ section {
   }
 
   .w-80 {
-    width: 100%;
+    width: 90%;
   }
 }
 .vid-youtube-responsive {
@@ -429,7 +433,7 @@ section {
     opacity: 1;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav_principal {
     flex-direction: column;
   }
@@ -465,6 +469,7 @@ section {
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
+  overflow-x: scroll;
 }
 .submenu .aside-menu .close {
   display: flex;
