@@ -11,7 +11,7 @@
         height: 100%;
         &__text {
             h1 {
-                font-size: 4.2rem;
+                font-size: 4.6rem;
                 div {
                     display: inline-block;
                 }
@@ -27,13 +27,12 @@
         .evulus-items {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             li {
                 width: calc(100% / 3 - 30px);
                 min-width: 200px;
                 background: $color-secundario;
                 padding: .5rem 1rem;
-                margin: 10px;
                 display: flex;
                 @include sombra-primaria;
                 align-items: center;

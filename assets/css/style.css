@@ -108,8 +108,8 @@ section {
   background: #dff0ee;
 }
 
-.w-80 {
-  width: 80%;
+.w-70 {
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -129,7 +129,7 @@ section {
 
 @media screen and (min-width: 1200px) {
   .container-evulus {
-    padding: 80px;
+    padding: 70px;
     width: 100%;
   }
 }
@@ -199,7 +199,7 @@ section {
 /* --------------------- BTN-EVULUS --------------------- */
 .btn-evulus {
   width: auto;
-  padding: 0.5rem 1rem 14px;
+  padding: 1rem 1.5rem 20px;
   margin: 0 auto;
   color: black;
   background: #ffbe1b;
@@ -537,7 +537,7 @@ section {
   height: 100%;
 }
 .evulus__content__text h1 {
-  font-size: 4.2rem;
+  font-size: 4.6rem;
 }
 .evulus__content__text h1 div {
   display: inline-block;
@@ -552,14 +552,13 @@ section {
 .evulus__content .evulus-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .evulus__content .evulus-items li {
   width: calc(100% / 3 - 30px);
   min-width: 200px;
   background: #ffffff;
   padding: 0.5rem 1rem;
-  margin: 10px;
   display: flex;
   box-shadow: 0px 0.5rem 1rem #b4b4b4;
   align-items: center;
