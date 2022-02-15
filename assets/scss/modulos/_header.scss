@@ -12,7 +12,7 @@
     background: $color-secundario;
     align-items: center;
     border-bottom: 1px solid #e0e3eb;
-    min-height: 70px;
+    min-height: 61px;
 }
 
 .menu-burguer {
@@ -74,7 +74,7 @@
             color: $color-principal;
             background: $color-secundario;
             z-index: 1;
-            padding: 0px .4rem;
+            padding: 0px 5px;
             &.active {
                 background: $color-principal !important;
             }

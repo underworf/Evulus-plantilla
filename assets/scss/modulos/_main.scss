@@ -1,55 +1,63 @@
 /* ----------------------- EVULUS ----------------------- */
 
 .evulus {
-    margin-top: 75px;
     background: url(../img/mapabg.svg) no-repeat top;
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        height: 100%;
-        &__text {
-            h1 {
-                font-size: 4.6rem;
-                div {
-                    display: inline-block;
-                }
-                span {
-                    color: $color-principal;
-                }
-            }
-            p {
-                font-size: 1.8em;
-                line-height: 2rem;
-            }
-        }
-        .evulus-items {
+    .row {
+        padding-top: 100px;
+        .evulus__content {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: space-between;
-            li {
-                width: calc(100% / 3 - 30px);
-                min-width: 200px;
-                background: $color-secundario;
-                padding: .5rem 1rem;
+            position: relative;
+            height: 100%;
+            &__text {
+                h1 {
+                    font-size: 4.6rem;
+                    div {
+                        display: inline-block;
+                    }
+                    span {
+                        color: $color-principal;
+                    }
+                }
+                p {
+                    font-size: 1.8em;
+                    line-height: 2rem;
+                }
+            }
+            .evulus-items {
                 display: flex;
-                @include sombra-primaria;
-                align-items: center;
-                transition: all 500ms;
-                -webkit-transition: all 500ms;
-                -moz-transition: all 500ms;
-                -ms-transition: all 500ms;
-                -o-transition: all 500ms;
-                &:hover {
-                    background: #f2f2f2;
+                flex-wrap: wrap;
+                justify-content: center;
+                li {
+                    width: 200px;
+                    background: $color-secundario;
+                    padding: .5rem 1rem;
+                    display: flex;
+                    @include sombra-primaria;
+                    align-items: center;
+                    transition: all 500ms;
+                    -webkit-transition: all 500ms;
+                    -moz-transition: all 500ms;
+                    -ms-transition: all 500ms;
+                    -o-transition: all 500ms;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    &:hover {
+                        background: #f2f2f2;
+                    }
                 }
             }
         }
-    }
-    &__img {
-        position: relative;
-        right: -30px;
+        .evulus__img {
+            position: relative;
+            right: -30px;
+        }
     }
 }
 
@@ -60,20 +68,51 @@
 }
 
 
+/* -------------------- CRYPTO-ASSETS ------------------- */
+
+.crypto-assets {
+    .crypto-assets-text {
+        p {
+            width: calc(50% - 20px);
+            font-size: 1.5rem;
+            text-align: justify;
+        }
+    }
+}
+
+
+/* ---------------------- PLATFORM ---------------------- */
+
+.platform {
+    .platform-text-item {
+        div {
+            font-size: 2rem;
+            font-weight: 700;
+            img {
+                width: 50px;
+            }
+        }
+        p {}
+    }
+}
+
+
 /* --------------------- EVU TOKENS --------------------- */
 
 .evu-tokens {
     &__content {
-        background: url(../img/mapabg-green.svg) no-repeat center;
         &__card {
-            background: $color-secundario;
-            border-radius: 20px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            -o-border-radius: 20px;
-            box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px .5rem 1rem #b4b4b4;
             ul {
+                margin: 0 auto;
+                padding: 2rem 3rem;
+                background: $color-secundario;
+                border-radius: 20px;
+                max-width: 270px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+                box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px .5rem 1rem #b4b4b4;
                 li {
                     position: relative;
                     & span {
@@ -84,6 +123,9 @@
                             content: "\f007";
                             margin: 0 5px 0 -22px;
                         }
+                    }
+                    p {
+                        margin: 0;
                     }
                     a {
                         display: inline-block;
@@ -103,9 +145,13 @@
                 }
             }
         }
+        &__img {
+            margin: 20px 0px;
+            max-width: 405px;
+        }
         &__text {
             li {
-                padding-bottom: 1.5rem;
+                margin-bottom: 2rem;
                 span::before {
                     font: var(--fa-font-solid);
                     content: "\F41B";
@@ -115,34 +161,53 @@
             }
         }
     }
+    .container-evulus {
+        background: url(../img/mapabg-green.svg) no-repeat center;
+    }
 }
 
-.clipboard {
-    width: 200px;
-    background: transparent;
-    font-size: 1rem;
-    user-select: none;
-}
 
-.copy {
-    background: $color-btn;
-    font-size: .8rem;
-    padding: 0 5px;
+/* -------------------- EVU-CONTRACT -------------------- */
+
+.evu-contract {
+    .contract__text {
+        display: flex;
+        row-gap: 20px;
+        flex-direction: column;
+        h3 {
+            font-size: 3rem;
+        }
+        p {
+            margin-bottom: 3rem;
+            font-size: 1.5rem;
+            text-align: justify;
+        }
+    }
+    .clipboard {
+        width: 200px;
+        background: transparent;
+        font-size: 1rem;
+        user-select: none;
+    }
+    .copy {
+        background: $color-btn;
+        font-size: .8rem;
+        padding: 0 5px;
+    }
 }
 
 
 /* -------------------- CRYPTO-Contract ------------------- */
 
-article {
-    line-height: 2rem;
-    text-align: justify;
-    font-size: 1.9em;
-    h3 {
-        font-size: 3rem;
-        font-weight: bolder;
-    }
-}
-
+// article {
+//     line-height: 2rem;
+//     text-align: justify;
+//     font-size: 1.9em;
+//     h3 {
+//         font-size: 3rem;
+//         font-weight: bolder;
+//     }
+// }
 
 /* -------------------- EVU GRAPCHICS -------------------- */
 
