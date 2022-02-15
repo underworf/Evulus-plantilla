@@ -322,8 +322,13 @@
     }
     .members-cards-line-2 {
         .card-member {
+            max-width: 162px;
             h5 {
                 font-size: 1.5rem;
+            }
+            img {
+                border: 10px solid $color-principal;
+                box-shadow: 0px 0px 0px 5px $bg-color;
             }
         }
     }
