@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 video,
 picture,
 iframe,
@@ -522,7 +526,6 @@ section {
 }
 /* ----------------------- EVULUS ----------------------- */
 .evulus {
-  min-height: 100vh;
   margin-top: 100px;
   background: url(../img/mapabg.svg) no-repeat;
 }
@@ -553,6 +556,7 @@ section {
 }
 .evulus__content .evulus-items li {
   width: calc(100% / 3 - 30px);
+  min-width: 200px;
   background: #ffffff;
   padding: 0.5rem 1rem;
   margin: 10px;
@@ -575,8 +579,39 @@ section {
   }
 }
 /* --------------------- EVU TOKENS --------------------- */
-.evu-tokens__head {
+.evu-tokens__content {
   background: url(../img/mapabg-green.svg) no-repeat center;
+}
+.evu-tokens__content__card {
+  background: #ffffff;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px 0.5rem 1rem #b4b4b4;
+}
+.evu-tokens__content__card ul li h5 {
+  color: #08907a;
+  font-weight: 900;
+}
+.evu-tokens__content__card ul li h5,
+.evu-tokens__content__card ul li p {
+  margin: 0;
+  display: inline-block;
+}
+.evu-tokens__content__card ul li a {
+  display: inline-block;
+  width: 100px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.evu-tokens__content__text li {
+  padding-bottom: 1.5rem;
 }
 
 .clipboard {
@@ -605,22 +640,16 @@ article h3 {
 
 /* ---------------------- EXCHANGES --------------------- */
 .exchanges__populate {
-  height: 300px;
+  padding: 100px;
 }
 .exchanges__populate a {
-  width: 400px;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  padding: 2rem;
+  width: 300px;
   background: #ffffff;
   box-shadow: 0px 0.5rem 1rem #b4b4b4;
-}
-.exchanges__platform {
-  height: 200px;
-  margin-bottom: 20px;
-}
-.exchanges__platform a {
-  width: 100px;
-  height: 100px;
-  background: #ffffff;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -667,6 +696,24 @@ article h3 {
 }
 .road-map__content .transactions div h5 {
   font-size: 4rem;
+}
+
+.slider-container {
+  width: 100%;
+  padding: 40px;
+}
+.slider-container .slider-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slider-container .slider-content .item-slider {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.slider-content--icons .item-slider {
+  width: auto !important;
 }
 
 /* ----------------------- CONTACT ---------------------- */

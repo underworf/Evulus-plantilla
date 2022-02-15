@@ -1,7 +1,6 @@
 /* ----------------------- EVULUS ----------------------- */
 
 .evulus {
-    min-height: 100vh;
     margin-top: 100px;
     background: url(../img/mapabg.svg) no-repeat;
     &__content {
@@ -31,7 +30,7 @@
             justify-content: center;
             li {
                 width: calc(100% / 3 - 30px);
-                // min-width: 100px;
+                min-width: 200px;
                 background: $color-secundario;
                 padding: .5rem 1rem;
                 margin: 10px;
@@ -61,8 +60,45 @@
 /* --------------------- EVU TOKENS --------------------- */
 
 .evu-tokens {
-    &__head {
+    &__content {
         background: url(../img/mapabg-green.svg) no-repeat center;
+        &__card {
+            background: $color-secundario;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px .5rem 1rem #b4b4b4;
+            ul {
+                li {
+                    & h5 {
+                        color: $color-principal;
+                        font-weight: 900;
+                    }
+                    & h5,
+                    p {
+                        margin: 0;
+                        display: inline-block;
+                    }
+                    a {
+                        display: inline-block;
+                        width: 100px;
+                        padding: 0.2rem .5rem;
+                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                    }
+                }
+            }
+        }
+        &__text {
+            li {
+                padding-bottom: 1.5rem;
+            }
+        }
     }
 }
 
@@ -97,21 +133,16 @@ article {
 
 .exchanges {
     &__populate {
-        height: 300px;
+        // height: 300px;
+        padding: 100px;
         a {
-            width: 400px;
-            height: 150px;
+            display: flex;
+            align-items: center;
+            height: 120px;
+            padding: 2rem;
+            width: 300px;
             background: $color-secundario;
             @include sombra-primaria;
-        }
-    }
-    &__platform {
-        height: 200px;
-        margin-bottom: 20px;
-        a {
-            width: 100px;
-            height: 100px;
-            background: $color-secundario;
             border-radius: 10px;
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
@@ -119,6 +150,20 @@ article {
             -o-border-radius: 10px;
         }
     }
+    // &__platform {
+    //     height: 200px;
+    //     margin-bottom: 20px;
+    //     a {
+    //         width: 100px;
+    //         height: 100px;
+    //         background: $color-secundario;
+    //         border-radius: 10px;
+    //         -webkit-border-radius: 10px;
+    //         -moz-border-radius: 10px;
+    //         -ms-border-radius: 10px;
+    //         -o-border-radius: 10px;
+    //     }
+    // }
 }
 
 
@@ -169,6 +214,26 @@ article {
                 }
             }
         }
+    }
+}
+
+.slider-container {
+    width: 100%;
+    padding: 40px;
+    .slider-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .item-slider {
+            flex-shrink: 0;
+            width: 200px;
+        }
+    }
+}
+
+.slider-content--icons {
+    .item-slider {
+        width: auto !important;
     }
 }
 
