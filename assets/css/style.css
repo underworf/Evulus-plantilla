@@ -113,6 +113,22 @@ section {
   margin: 0 auto;
 }
 
+.w-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.enlace-lenear {
+  display: inline-block;
+  color: black;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.text-green-evulus {
+  color: #08907a;
+}
+
 /* ---------------------- SUBTITLE ---------------------- */
 .subtitle {
   width: 100%;
@@ -129,7 +145,7 @@ section {
 
 @media screen and (min-width: 1200px) {
   .container-evulus {
-    padding: 70px;
+    padding: 30px 70px;
     width: 100%;
   }
 }
@@ -161,6 +177,11 @@ section {
 
   .w-80 {
     width: 90%;
+  }
+
+  .w-70 {
+    width: 80%;
+    margin: 0 auto;
   }
 
   .subtitle {
@@ -452,7 +473,7 @@ section {
   border: 1px solid #08907a;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .logginSearch {
     flex-direction: column;
   }
@@ -526,8 +547,8 @@ section {
 }
 /* ----------------------- EVULUS ----------------------- */
 .evulus {
-  margin-top: 100px;
-  background: url(../img/mapabg.svg) no-repeat;
+  margin-top: 75px;
+  background: url(../img/mapabg.svg) no-repeat top;
 }
 .evulus__content {
   display: flex;
@@ -571,6 +592,10 @@ section {
 .evulus__content .evulus-items li:hover {
   background: #f2f2f2;
 }
+.evulus__img {
+  position: relative;
+  right: -30px;
+}
 
 @media screen and (max-width: 1200px) {
   .evulus {
@@ -590,14 +615,17 @@ section {
   -o-border-radius: 20px;
   box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px 0.5rem 1rem #b4b4b4;
 }
-.evu-tokens__content__card ul li h5 {
+.evu-tokens__content__card ul li {
+  position: relative;
+}
+.evu-tokens__content__card ul li span {
   color: #08907a;
   font-weight: 900;
 }
-.evu-tokens__content__card ul li h5,
-.evu-tokens__content__card ul li p {
-  margin: 0;
-  display: inline-block;
+.evu-tokens__content__card ul li span::before {
+  font: var(--fa-font-solid);
+  content: "\f007";
+  margin: 0 5px 0 -22px;
 }
 .evu-tokens__content__card ul li a {
   display: inline-block;
@@ -609,8 +637,19 @@ section {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+.evu-tokens__content__card ul li span::before {
+  font: var(--fa-font-solid);
+  content: "\f007";
+  margin: 0 5px 0 -22px;
+}
 .evu-tokens__content__text li {
   padding-bottom: 1.5rem;
+}
+.evu-tokens__content__text li span::before {
+  font: var(--fa-font-solid);
+  content: "\f41b";
+  color: #08907a;
+  margin: 0 5px 0 -22px;
 }
 
 .clipboard {
@@ -626,7 +665,7 @@ section {
   padding: 0 5px;
 }
 
-/* -------------------- CRYPTO-ASSETS ------------------- */
+/* -------------------- CRYPTO-Contract ------------------- */
 article {
   line-height: 2rem;
   text-align: justify;
@@ -637,11 +676,23 @@ article h3 {
   font-weight: bolder;
 }
 
-/* ---------------------- EXCHANGES --------------------- */
-.exchanges__populate {
-  padding: 100px;
+/* -------------------- EVU GRAPCHICS -------------------- */
+.evu-graphics {
+  background: url(../img/mapabg-green.svg) no-repeat top;
 }
-.exchanges__populate a {
+.evu-graphics p,
+.evu-graphics h3 {
+  color: #08907a;
+}
+.evu-graphics p {
+  font-size: 0.6rem;
+}
+
+/* ---------------------- EXCHANGES --------------------- */
+.exchanges__content {
+  padding: 80px 0px;
+}
+.exchanges__content__populate a {
   display: flex;
   align-items: center;
   height: 120px;
@@ -661,7 +712,6 @@ article h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 40px;
   justify-content: center;
 }
 .service .service-items a {
@@ -683,17 +733,56 @@ article h3 {
 .service .service-items a:hover {
   background: #091c3e;
 }
+.service .card-member {
+  max-width: 250px;
+  margin: 20px;
+}
+.service .card-member img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 15px solid #08907a;
+  box-shadow: 0px 0px 0px 10px #c1e3de;
+  width: 100%;
+}
+.service .card-member h5 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.service .card-member p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.service .card-member .member-redes a {
+  display: inline-block;
+  color: #08907a;
+  font-size: 2rem;
+  margin: 10px;
+}
+.service .members-cards-line-2 .card-member h5 {
+  font-size: 1.5rem;
+}
 
 /* ---------------------- ROAD MAP ---------------------- */
+.pt-100 {
+  padding-top: 100px;
+}
+
+.road-map {
+  background: url(../img/mapabg-green.svg) no-repeat top;
+}
 .road-map__content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.road-map__content .transactions div {
+.road-map .transactions div {
   text-size-adjust: initial;
 }
-.road-map__content .transactions div h5 {
+.road-map .transactions div h5 {
   font-size: 4rem;
 }
 
@@ -706,9 +795,19 @@ article h3 {
   justify-content: space-around;
   align-items: center;
 }
-.slider-container .slider-content .item-slider {
-  flex-shrink: 0;
-  width: 200px;
+.slider-container .slider-content .item-slide {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.slider-container .slider-content .item-slide:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .slider-content--icons .item-slider {
@@ -729,8 +828,19 @@ article h3 {
   align-items: center;
   justify-content: center;
 }
+.contact__content p {
+  font-size: 2rem;
+  padding: 0;
+}
 .contact__content p:nth-child(2) {
   font-size: 3rem;
+  font-weight: 500;
+}
+.contact__content .social-icons--white li a img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  width: 70px;
+  height: 70px;
 }
 
 .footer {

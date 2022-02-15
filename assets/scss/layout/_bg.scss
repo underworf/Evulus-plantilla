@@ -21,6 +21,22 @@
     margin: 0 auto;
 }
 
+.w-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.enlace-lenear {
+    display: inline-block;
+    color: $color-texo;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.text-green-evulus {
+    color: $color-principal;
+}
+
 
 /* ---------------------- SUBTITLE ---------------------- */
 
@@ -39,7 +55,7 @@
 
 @media screen and (min-width:1200px) {
     .container-evulus {
-        padding: 70px;
+        padding: 30px 70px;
         width: 100%;
     }
 }
@@ -75,6 +91,10 @@
     }
     .w-80 {
         width: 90%;
+    }
+    .w-70 {
+        width: 80%;
+        margin: 0 auto;
     }
     .subtitle {
         padding: 0px 0px .3rem;
