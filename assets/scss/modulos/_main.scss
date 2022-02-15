@@ -26,11 +26,10 @@
                 }
             }
             .evulus-items {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                gap: 20px;
                 li {
-                    width: 200px;
+                    max-width: 220px;
+                    min-height: 67px;
                     background: $color-secundario;
                     padding: .5rem 1rem;
                     display: flex;
@@ -46,8 +45,6 @@
                     -moz-border-radius: 5px;
                     -ms-border-radius: 5px;
                     -o-border-radius: 5px;
-                    margin-right: 20px;
-                    margin-bottom: 20px;
                     &:hover {
                         background: #f2f2f2;
                     }
@@ -73,7 +70,6 @@
 .crypto-assets {
     .crypto-assets-text {
         p {
-            width: calc(50% - 20px);
             font-size: 1.5rem;
             text-align: justify;
         }
@@ -213,6 +209,13 @@
 
 .evu-graphics {
     background: url(../img/mapabg-green.svg) no-repeat top;
+    .graphics-distribution {
+        position: relative;
+        &__grafico {
+            position: absolute;
+            bottom: 0;
+        }
+    }
     p,
     h3 {
         color: $color-principal;
@@ -229,11 +232,10 @@
     &__content {
         padding: 80px 0px;
         &__populate {
-            // height: 300px;
             a {
                 display: flex;
                 align-items: center;
-                height: 120px;
+                height: 136px;
                 padding: 2rem;
                 width: 300px;
                 background: $color-secundario;
@@ -243,6 +245,7 @@
                 -moz-border-radius: 10px;
                 -ms-border-radius: 10px;
                 -o-border-radius: 10px;
+                margin: 20px;
             }
         }
         // &__platform {
@@ -271,6 +274,8 @@
         flex-wrap: wrap;
         gap: 40px;
         justify-content: center;
+        padding-top: 200px;
+        padding-bottom: 100px;
         a {
             width: calc(100% / 4 - 40px);
             min-width: 200px;
@@ -291,9 +296,21 @@
             }
         }
     }
+    .service-team__text {
+        h3 {
+            font-size: 3.7rem;
+        }
+        p {
+            font-size: 1rem;
+            margin: 20px;
+            margin: 20px auto;
+        }
+    }
     .card-member {
-        max-width: 250px;
-        margin: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0px;
         img {
             border-radius: 50%;
             -webkit-border-radius: 50%;
@@ -302,7 +319,8 @@
             -o-border-radius: 50%;
             border: 15px solid $color-principal;
             box-shadow: 0px 0px 0px 10px $bg-color;
-            width: 100%;
+            width: 60%;
+            margin-bottom: 10px;
         }
         h5 {
             font-weight: 900;
@@ -316,15 +334,19 @@
         .member-redes a {
             display: inline-block;
             color: $color-principal;
-            font-size: 2rem;
-            margin: 10px;
+            font-size: 1.2rem;
         }
     }
     .members-cards-line-2 {
         .card-member {
-            max-width: 162px;
+            img {
+                margin-bottom: 5px;
+            }
             h5 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+            }
+            p {
+                font-size: .8rem;
             }
             img {
                 border: 10px solid $color-principal;
@@ -384,9 +406,9 @@
     }
 }
 
-.slider-content--icons {
+.slider-content--incons {
     .item-slider {
-        width: auto !important;
+        width: 200px;
     }
 }
 
