@@ -614,6 +614,12 @@ section {
   .evulus {
     background-repeat: repeat;
   }
+  .evulus .row {
+    padding-top: 40px;
+  }
+  .evulus__img {
+    right: 0;
+  }
 }
 /* -------------------- CRYPTO-ASSETS ------------------- */
 .crypto-assets .crypto-assets-text p {
