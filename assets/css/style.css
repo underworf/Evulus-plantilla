@@ -361,6 +361,9 @@ section {
   vertical-align: text-top;
 }
 
+.social-icons {
+  flex-wrap: wrap;
+}
 .social-icons li a img {
   width: 30px;
   height: 30px;
