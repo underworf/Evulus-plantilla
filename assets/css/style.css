@@ -701,6 +701,7 @@ section {
 }
 .platform .platform-text-item div img {
   width: 40px;
+  vertical-align: baseline;
 }
 
 /* --------------------- EVU TOKENS --------------------- */
@@ -967,36 +968,19 @@ section {
 .road-map .transactions div h5 {
   font-size: 4rem;
 }
-
-.slider-container {
-  width: 100%;
-  padding: 40px;
+.road-map__slider .owl-carousel .item img {
+  width: 150px;
 }
-.slider-container .slider-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+
+.slider-1 {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.item.item--slider {
+  width: 160px;
   color: #08907a;
-}
-.slider-container .slider-content .item-slide {
-  flex-shrink: 0;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-}
-.slider-container .slider-content .item-slide:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
-.slider-content--incons .item-slider {
-  width: 200px;
+  text-align: center;
 }
 
 /* ----------------------- CONTACT ---------------------- */

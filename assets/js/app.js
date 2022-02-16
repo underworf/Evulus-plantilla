@@ -86,3 +86,19 @@ if (windowSize < 1200) {
 window.addEventListener('resize', () => {
     responsive()
 })
+
+/* ----------------------- SLIDER ----------------------- */
+
+$('.owl-carousel').owlCarousel({
+    margin: 10,
+    loop: true,
+    autoWidth: true,
+    items: 8
+})
+
+$('#owl-carusel-2').owlCarousel({
+    margin: 10,
+    loop: true,
+    autoWidth: true,
+    items: 4
+})
