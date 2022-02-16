@@ -14,13 +14,16 @@
     font-weight: 700;
     font-size: $font-size;
     text-align: center;
-    border-radius: .5rem;
-    -webkit-border-radius: .5rem;
-    -moz-border-radius: .5rem;
-    -ms-border-radius: .5rem;
-    -o-border-radius: .5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     display: inline-block;
     white-space: nowrap;
+    &:focus {
+        border: none
+    }
 }
 
 .btn-evulus {
@@ -30,9 +33,32 @@
     }
 }
 
+.btn-evulus-medium {
+    @include btn-personalizado($color-btn, 0px 20px 4px 20px, auto, 1rem);
+    &:hover {
+        background: #e0a800;
+    }
+    &:active {
+        background: #d39e00;
+    }
+}
+
 .btn-evulus-small {
     @include btn-personalizado($color-btn, .5rem .5rem 5px, auto, 1rem);
-    margin: 0
+    margin: 0;
+    &:hover {
+        background: #e0a800;
+        color: $color-texo;
+    }
+    &:active {
+        background: #d39e00;
+    }
+}
+
+@mixin f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -78,6 +104,7 @@
     font-size: 12px;
     font-weight: 700;
     height: fit-content;
+    margin: 10px;
     padding: 5px .5rem;
     color: $color-texo;
     border: 2px solid #eee;

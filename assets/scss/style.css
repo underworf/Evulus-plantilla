@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ----------------------- COLORS ----------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
@@ -102,7 +101,7 @@ section {
 }
 
 .bg-verde-claro {
-  background: #b1e3de;
+  background: #c1e3de;
 }
 
 .bg-verde-ultra-claro {
@@ -141,12 +140,12 @@ section {
 .subtitle h2 {
   color: #ffffff;
   font-size: 3.7rem;
-  font-weight: 400;
+  font-weight: 900;
 }
 
 .container-evulus {
   padding: 60px 70px;
-  max-width: 1500px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -235,51 +234,16 @@ section {
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   display: inline-block;
   white-space: nowrap;
-}
-.btn-evulus:focus {
-  border: none;
 }
 .btn-evulus:hover {
   box-shadow: 0px 0px 2rem #ffbe1b;
-}
-
-.btn-evulus-medium {
-  width: auto;
-  padding: 0px 20px 4px 20px;
-  margin: 0 auto;
-  color: black;
-  background: #ffbe1b;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
-  font-weight: 700;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  display: inline-block;
-  white-space: nowrap;
-}
-.btn-evulus-medium:focus {
-  border: none;
-}
-.btn-evulus-medium:hover {
-  background: #e0a800;
-}
-.btn-evulus-medium:active {
-  background: #d39e00;
 }
 
 .btn-evulus-small {
@@ -296,24 +260,14 @@ section {
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   display: inline-block;
   white-space: nowrap;
   margin: 0;
-}
-.btn-evulus-small:focus {
-  border: none;
-}
-.btn-evulus-small:hover {
-  background: #e0a800;
-  color: black;
-}
-.btn-evulus-small:active {
-  background: #d39e00;
 }
 
 /* ----------------------- BTN NAV ---------------------- */
@@ -332,19 +286,15 @@ section {
   font-weight: 700;
   font-size: 0.9rem;
   text-align: center;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   display: inline-block;
   white-space: nowrap;
   color: #ffffff;
   border: 1px solid #08907a;
-}
-.btn-1:focus,
-.btn-2:focus {
-  border: none;
 }
 .btn-1:hover,
 .btn-2:hover {
@@ -377,16 +327,13 @@ section {
   font-weight: 700;
   font-size: 0.9rem;
   text-align: center;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   display: inline-block;
   white-space: nowrap;
-}
-.btn-evulus-green:focus {
-  border: none;
 }
 .btn-evulus-green:hover {
   background: #08907a;
@@ -402,7 +349,6 @@ section {
   font-size: 12px;
   font-weight: 700;
   height: fit-content;
-  margin: 10px;
   padding: 5px 0.5rem;
   color: black;
   border: 2px solid #eee;
@@ -440,13 +386,6 @@ section {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
-}
-
-.social-icons--white li a img {
-  filter: brightness(0) invert(100%);
-  -webkit-filter: brightness(0) invert(100%);
-  width: 70px;
-  height: 70px;
 }
 
 .navbar {
@@ -697,10 +636,10 @@ section {
 /* ---------------------- PLATFORM ---------------------- */
 .platform .platform-text-item div {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 .platform .platform-text-item div img {
-  width: 40px;
+  width: 50px;
 }
 
 /* --------------------- EVU TOKENS --------------------- */
@@ -709,10 +648,10 @@ section {
 }
 .evu-tokens__content__card ul {
   margin: 0 auto;
-  padding: 40px 20px 40px 40px;
+  padding: 2rem 3rem;
   background: #ffffff;
   border-radius: 20px;
-  width: 250px;
+  max-width: 270px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -735,36 +674,19 @@ section {
   margin: 0;
 }
 .evu-tokens__content__card ul li a {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  width: 125px;
+  display: inline-block;
+  width: 100px;
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
-}
-.evu-tokens__content__card ul li a:hover {
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.418);
-}
-.evu-tokens__content__card ul li span {
-  position: relative;
 }
 .evu-tokens__content__card ul li span::before {
-  content: "";
-  background: url(../icons/icon-hexágono.svg) no-repeat;
-  background-size: contain;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  bottom: 0;
+  font: var(--fa-font-solid);
+  content: "\f007";
+  margin: 0 5px 0 -22px;
 }
 .evu-tokens__content__img {
   margin: 20px 0px;
@@ -772,16 +694,12 @@ section {
 }
 .evu-tokens__content__text li {
   margin-bottom: 2rem;
-  position: relative;
 }
-.evu-tokens__content__text li::before {
-  content: "";
-  background: url(../icons/icon-hexágono.svg) no-repeat;
-  background-size: contain;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  margin: 10px 0px 0px -25px;
+.evu-tokens__content__text li span::before {
+  font: var(--fa-font-solid);
+  content: "\f41b";
+  color: #08907a;
+  margin: 0 5px 0 -22px;
 }
 .evu-tokens .container-evulus {
   background: url(../img/mapabg-green.svg) no-repeat center;
@@ -864,38 +782,28 @@ section {
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 200px;
   padding-bottom: 100px;
 }
 .service .service-items a {
   width: calc(100% / 4 - 40px);
-  min-width: 270px;
-  height: 170px;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 2rem;
-  line-height: 30px;
+  min-width: 250px;
+  height: 200px;
   box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.418);
   transition: all 300ms;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   -ms-transition: all 300ms;
   -o-transition: all 300ms;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
   color: #08907a;
-  font-weight: 500;
-  text-align: center;
 }
 .service .service-items a:hover {
   background: #091c3e;
-  color: #ffffff;
 }
 .service .service-team__text h3 {
   font-size: 3.7rem;
@@ -955,8 +863,10 @@ section {
   padding-top: 100px;
 }
 
-.road-map__content {
+.road-map {
   background: url(../img/mapabg-green.svg) no-repeat top;
+}
+.road-map__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -976,11 +886,8 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center;
-  color: #08907a;
 }
 .slider-container .slider-content .item-slide {
-  flex-shrink: 0;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -1021,6 +928,12 @@ section {
   font-size: 3rem;
   font-weight: 500;
 }
+.contact__content .social-icons--white li a img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  width: 70px;
+  height: 70px;
+}
 
 .footer {
   color: #ffffff;
@@ -1028,15 +941,6 @@ section {
 .footer__content h5 {
   margin-top: 20px;
   font-weight: bolder;
-}
-.footer__content .btn-evulus-small {
-  padding: 0px 15px;
-  font-size: 10px;
-}
-.footer__content .social-icons--white li a img {
-  width: 20px;
-  height: 20px;
-  margin: 0px 10px 0px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

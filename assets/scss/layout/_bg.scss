@@ -49,8 +49,14 @@
     h2 {
         color: $color-secundario;
         font-size: 3.7rem;
-        font-weight: 900;
+        font-weight: 400;
     }
+}
+
+.container-evulus {
+    padding: 60px 70px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width:1200px) {

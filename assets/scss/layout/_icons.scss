@@ -18,3 +18,12 @@
         }
     }
 }
+
+.social-icons--white {
+    li a img {
+        filter: brightness(0) invert(100%);
+        -webkit-filter: brightness(0) invert(100%);
+        width: 70px;
+        height: 70px;
+    }
+}
