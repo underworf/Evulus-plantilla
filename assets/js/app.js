@@ -23,29 +23,6 @@ $('main').on('click', function() {
 
 })
 
-/* ---------------------- Splide --------------------- */
-// const slider = document.querySelector('.slider-content')
-// const itemSlider = document.querySelectorAll('.item-slider')
-// let count = 1;
-// let itemWidth = $('#width-item-slide').width()
-
-// setInterval(function() {
-//     initSlides()
-// }, 2000)
-
-// function initSlides() {
-//     slider.style.transform = "translate(" + (-itemWidth * count) + "px)"
-//     slider.style.transition = "all .7s"
-//     count++
-
-//     if (count == itemSlider.length) {
-//         setTimeout(function() {
-//             slider.style.transform = "translate(0px)"
-//             slider.style.transition = " all 0s"
-//             count = 1
-//         }, 1000)
-//     }
-// }
 
 
 /* ------------------------ MENU ------------------------ */
@@ -59,18 +36,6 @@ $('.menu-burguer').click(function() {
 
 })
 
-$(document).ready(function() {
-    var resolucion = $(window).resize(function() {
-        $(window).height()
-    })
-    if (resolucion < 1024) {
-
-    }
-    console.log(resolucion);
-
-
-
-})
 
 var windowSize = $(window).width();
 
@@ -114,7 +79,8 @@ function responsive() {
 }
 
 
-if (windowSize < 992) {
+
+if (windowSize < 1200) {
     responsive()
 }
 window.addEventListener('resize', () => {

@@ -7,9 +7,6 @@
         .evulus__content {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            height: 100%;
             &__text {
                 h1 {
                     font-size: 4.6rem;
@@ -56,6 +53,10 @@
             right: -30px;
         }
     }
+    .social-icons {
+        position: relative;
+        bottom: 0;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -97,6 +98,7 @@
 
 .evu-tokens {
     &__content {
+        gap: 20px;
         &__card {
             ul {
                 margin: 0 auto;
@@ -179,42 +181,38 @@
             text-align: justify;
         }
     }
-    .clipboard {
-        width: 200px;
-        background: transparent;
-        font-size: 1rem;
-        user-select: none;
+    .contract__buttons {
+        a {
+            margin: 10px 10px 0px 0px;
+        }
     }
-    .copy {
-        background: $color-btn;
-        font-size: .8rem;
-        padding: 0 5px;
+    .copy-contract {
+        margin: 20px 0px;
+        display: flex;
+        width: 400px;
+        .clipboard {
+            width: 100%;
+            background: transparent;
+            font-size: 1rem;
+            user-select: none;
+        }
+        .copy {
+            background: $color-btn;
+            font-size: .8rem;
+            padding: 0 5px;
+        }
     }
 }
 
-
-/* -------------------- CRYPTO-Contract ------------------- */
-
-// article {
-//     line-height: 2rem;
-//     text-align: justify;
-//     font-size: 1.9em;
-//     h3 {
-//         font-size: 3rem;
-//         font-weight: bolder;
-//     }
-// }
 
 /* -------------------- EVU GRAPCHICS -------------------- */
 
 .evu-graphics {
     background: url(../img/mapabg-green.svg) no-repeat top;
     .graphics-distribution {
-        position: relative;
-        &__grafico {
-            position: absolute;
-            bottom: 0;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     p,
     h3 {
