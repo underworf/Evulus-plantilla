@@ -64,9 +64,9 @@
         background-repeat: repeat;
         .row {
             padding-top: 40px;
-        }
-        &__img {
-            right: 0;
+            .evulus__img {
+                right: 0;
+            }
         }
     }
 }

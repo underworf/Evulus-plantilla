@@ -617,7 +617,7 @@ section {
   .evulus .row {
     padding-top: 40px;
   }
-  .evulus__img {
+  .evulus .row .evulus__img {
     right: 0;
   }
 }
