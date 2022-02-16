@@ -90,15 +90,68 @@ window.addEventListener('resize', () => {
 /* ----------------------- SLIDER ----------------------- */
 
 $('.owl-carousel').owlCarousel({
-    margin: 10,
     loop: true,
-    autoWidth: true,
-    items: 8
+    dots: false,
+    nav: true,
+    navText: [
+
+        "<i class='fa-solid fa-angle-left'></i>",
+        "<i class='fa-solid fa-angle-right'></i>",
+    ],
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        350: {
+            items: 2
+        },
+        500: {
+            items: 3
+        },
+        700: {
+            items: 4
+        },
+        1000: {
+            items: 5
+        },
+        1200: {
+            items: 7
+        }
+    }
 })
 
-$('#owl-carusel-2').owlCarousel({
-    margin: 10,
-    loop: true,
-    autoWidth: true,
-    items: 4
-})
+// $('.owl-carousel').owlCarousel({
+//     nav: true,
+//     margin: 10,
+//     loop: true,
+//     autoWidth: true,
+//     dots: false,
+//     responsive: {
+//         0: {
+//             items: 1
+//         },
+//         992: {
+//             items: 5
+//         },
+//         1000: {
+//             items: 8,
+//             nav: true,
+
+//         }
+//     }
+// })
+
+
+
+
+// var owl = $('.owl-carousel');
+// owl.owlCarousel({
+//     items: 4,
+//     loop: true,
+//     margin: 10,
+//     autoplay: true,
+//     autoplayTimeout: 1000,
+//     autoplayHoverPause: true
+// });

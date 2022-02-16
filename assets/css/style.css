@@ -859,6 +859,50 @@ section {
   margin: 20px;
 }
 
+.carousel-wrap {
+  margin: 90px auto;
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+}
+
+/* end fix */
+.owl-nav > button {
+  margin-top: -26px;
+  position: absolute;
+  top: 30%;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: #ffffff;
+  background: transparent !important;
+}
+
+.owl-nav i {
+  font-size: 52px;
+  color: #cdcbcd;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
 /* ----------------------- SERVICE ---------------------- */
 .service .service-items {
   display: flex;
