@@ -77,9 +77,9 @@
         margin: 0 auto;
     }
     .subtitle {
-        padding: 0rem 2rem .3rem;
         h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            padding: 8px 0px 6px 0px;
         }
     }
     .social-icons--black {
@@ -107,8 +107,8 @@
     }
 }
 
-@media screen and (max-width:385px) {
-    .submenu {
+@media screen and (max-width:395px) {
+    .aside-menu {
         width: 100%;
     }
 }

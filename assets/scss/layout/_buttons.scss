@@ -155,3 +155,41 @@
         vertical-align: text-top;
     }
 }
+
+
+/* --------------------- BUTTON TOP --------------------- */
+
+.go-top {
+    background: $color-principal;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: $borde-radius-medium;
+    -webkit-border-radius: $borde-radius-medium;
+    -moz-border-radius: $borde-radius-medium;
+    -ms-border-radius: $borde-radius-medium;
+    -o-border-radius: $borde-radius-medium;
+    transition: $transition-all;
+    @include f-center;
+    font-size: 32px;
+    color: $color-secundario;
+    box-shadow: $box-shadow-terciario;
+    text-decoration: none;
+    pointer-events: none;
+    -webkit-transition: $transition-all;
+    -moz-transition: $transition-all;
+    -ms-transition: $transition-all;
+    -o-transition: $transition-all;
+    opacity: 0;
+    &:hover {
+        color: $color-secundario;
+    }
+}
+
+.go-top.active {
+    opacity: 1;
+    bottom: 32px;
+    pointer-events: auto;
+}

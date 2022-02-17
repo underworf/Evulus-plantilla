@@ -151,11 +151,11 @@ section {
   position: absolute;
   top: 0;
   width: 100%;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
 /* ---------------------- SUBTITLE ---------------------- */
@@ -163,7 +163,7 @@ section {
   width: 100%;
   text-align: center;
   background: white;
-  background: linear-gradient(90deg, white 0%, #08907a 10%, #08907a 50%, #08907a 90%, white 100%);
+  background: linear-gradient(90deg, white 0%, #009c87 20%, #009179 50%, #00b3a0 80%, white 100%);
   padding: 0rem 2rem 1rem;
 }
 .subtitle h2 {
@@ -492,6 +492,44 @@ section {
   vertical-align: text-top;
 }
 
+/* --------------------- BUTTON TOP --------------------- */
+.go-top {
+  background: #08907a;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: all 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
+  text-decoration: none;
+  pointer-events: none;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  opacity: 0;
+}
+.go-top:hover {
+  color: #ffffff;
+}
+
+.go-top.active {
+  opacity: 1;
+  bottom: 32px;
+  pointer-events: auto;
+}
+
 .social-icons {
   flex-wrap: wrap;
 }
@@ -638,56 +676,54 @@ section {
 }
 
 .submenu {
-  width: 375px;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
-  right: -375px;
-  z-index: 10;
-  transition: all 800ms ease-in-out;
-  -webkit-transition: all 800ms ease-in-out;
-  -moz-transition: all 800ms ease-in-out;
-  -ms-transition: all 800ms ease-in-out;
-  -o-transition: all 800ms ease-in-out;
+  right: -100%;
+  background: rgba(55, 55, 55, 0.295);
 }
-.submenu .aside-menu {
+
+.aside-menu {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: -100%;
+  z-index: 10;
+  right: -150%;
   height: 100%;
-  width: 100%;
+  width: 375px;
   border-left: 1px solid #eeee;
   background: #ffffff;
-  transition: all 800ms ease-in-out;
-  -webkit-transition: all 800ms ease-in-out;
-  -moz-transition: all 800ms ease-in-out;
-  -ms-transition: all 800ms ease-in-out;
-  -o-transition: all 800ms ease-in-out;
+  transition: all 700ms ease-in-out;
+  -webkit-transition: all 700ms ease-in-out;
+  -moz-transition: all 700ms ease-in-out;
+  -ms-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
   overflow-x: scroll;
 }
-.submenu .aside-menu .close {
+.aside-menu .close {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
-.submenu .aside-menu .close:hover {
+.aside-menu .close:hover {
   color: #08907a;
 }
-.submenu .aside-menu .btn-evulus-green {
+.aside-menu .btn-evulus-green {
   height: 40px;
   display: flex;
   align-items: center;
   text-align: start;
 }
-.submenu .aside-menu .nav_principal {
+.aside-menu .nav_principal {
   gap: 0;
 }
-.submenu .aside-menu .logginSearch {
+.aside-menu .logginSearch {
   margin-bottom: 20px;
 }
-.submenu .aside-menu .nav-items-static {
+.aside-menu .nav-items-static {
   margin-top: 20px;
 }
 
@@ -698,8 +734,16 @@ section {
   right: 0;
   z-index: 10;
 }
-.submenu.active .aside-menu {
+
+.aside-menu.active {
   right: 0;
+}
+
+.bg-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #c1e3de;
 }
 
 /* ----------------------- EVULUS ----------------------- */
@@ -1072,14 +1116,41 @@ section {
   flex-direction: column;
   align-items: center;
 }
-.road-map .transactions div {
-  text-size-adjust: initial;
-}
-.road-map .transactions div h5 {
+.road-map .transactions .contador-container .contador,
+.road-map .transactions .contador-container span {
   font-size: 4rem;
+  margin: 0;
+}
+.road-map .transactions .contador-container p {
+  font-size: 1.5rem;
 }
 .road-map__slider .owl-carousel .item img {
   width: 150px;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+}
+.road-map .show-number {
+  opacity: 0;
+}
+.road-map .animation-number {
+  animation: aparecer 1.3s;
+  -webkit-animation: aparecer 1.3s;
 }
 
 /* ----------------------- CONTACT ---------------------- */
@@ -1204,11 +1275,9 @@ section {
     margin: 0 auto;
   }
 
-  .subtitle {
-    padding: 0rem 2rem 0.3rem;
-  }
   .subtitle h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 8px 0px 6px 0px;
   }
 
   .social-icons--black li a img {
@@ -1235,8 +1304,8 @@ section {
     width: 100%;
   }
 }
-@media screen and (max-width: 385px) {
-  .submenu {
+@media screen and (max-width: 395px) {
+  .aside-menu {
     width: 100%;
   }
 }

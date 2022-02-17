@@ -8,8 +8,12 @@ $('.close').click(function() {
 $('.menu-burguer').click(function() {
     $('.submenu').addClass('active')
     $('.aside-menu').addClass('active')
-
 })
+$('.submenu').click(function() {
+    $('.submenu').removeClass('active')
+    $('.aside-menu').removeClass('active')
+})
+
 
 
 var windowSize = $(window).width();
@@ -58,6 +62,17 @@ window.addEventListener('resize', () => {
     responsive()
 })
 
+
+/* --------------------- BUTTON TOP --------------------- */
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        $('.go-top').addClass('active')
+    } else {
+        $('.go-top').removeClass('active')
+    }
+})
+
+
 /* --------------------- COPY BUTTON -------------------- */
 
 
@@ -84,12 +99,6 @@ textSeach.addEventListener('click', () => {
 })
 
 
-
-$('main').on('click', function() {
-    $('.submenu').removeClass('active')
-    buttonSeach.classList.remove('active')
-
-})
 
 
 
@@ -152,4 +161,55 @@ $('.owl-carousel').owlCarousel({
             items: 7
         }
     }
+})
+
+
+/* ------------------ NUMBERS-ANIMATION ----------------- */
+
+const contadores = $('.contador')
+const velocidad = 500
+
+const animacionContadores = () => {
+    for (const contador of contadores) {
+        const actualizar_contador = () => {
+            let cantidad_maxima = +contador.dataset.cantidad
+            let valor_actual = +contador.innerText
+            let incremento = cantidad_maxima / velocidad
+
+
+            if (valor_actual < cantidad_maxima) {
+                contador.innerText = Math.ceil(valor_actual + incremento)
+                setTimeout(actualizar_contador, 30)
+            } else {
+                contador.innerText = cantidad_maxima
+            }
+        }
+        actualizar_contador()
+    }
+}
+
+
+/* ---------------- INTERSECTIONOBSERVER ---------------- */
+
+const iniciarConteo = elementos => {
+    elementos.forEach(elemento => {
+        if (elemento.isIntersecting) {
+
+            let container = document.querySelectorAll('.contador-container')
+            container.forEach(item => {
+                item.classList.add('animation-number')
+                item.classList.remove("show-number")
+            })
+            setTimeout(animacionContadores, 300)
+        }
+    })
+}
+
+const observador = new IntersectionObserver(iniciarConteo, {
+    threshold: 0.75
+})
+
+const elementosHTML = document.querySelectorAll('.contador')
+elementosHTML.forEach(containerContador => {
+    observador.observe(containerContador)
 })

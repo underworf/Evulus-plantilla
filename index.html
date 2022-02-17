@@ -82,24 +82,23 @@
             </div>
 
             <div class="submenu">
-                <div class="aside-menu  p-3" id="aside-menu">
+            </div>
+            <div class="aside-menu  p-3" id="aside-menu">
 
-                    <div class="close">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="items-submenu" id="items-submenu">
-
-                    </div>
-                    <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
-                    <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
-                    <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
-                    <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
-                    <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
-
+                <div class="close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="items-submenu" id="items-submenu">
 
                 </div>
-            </div>
+                <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
+                <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
+                <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
+                <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
+                <a href="" class="btn-evulus-green"><i class="fas fa-trophy-alt"></i>Item 1</a>
 
+
+            </div>
         </nav>
 
     </header>
@@ -636,20 +635,32 @@
             <div class=" w-100 py-5 bg-verde-claro ">
                 <div class="container ">
                     <div class="row transactions text-center ">
-                        <div class="col-lg-3 col-sm-6 ">
-                            <h5>+10K</h5>
+                        <div class="contador-container  show-number  col-lg-3 col-sm-6 ">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h5 class="contador " data-cantidad="10"></h5>
+                                <span>k</span>
+                            </div>
                             <p>Usuarios</p>
                         </div>
-                        <div class="col-lg-3 col-sm-6 ">
-                            <h5>+200K</h5>
+                        <div class="contador-container  show-number col-lg-3 col-sm-6 ">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h5 class="contador " data-cantidad="200"></h5>
+                                <span>k</span>
+                            </div>
                             <p>Transacciones</p>
                         </div>
-                        <div class="col-lg-3 col-sm-6 ">
-                            <h5>+500K</h5>
+                        <div class="contador-container  show-number  col-lg-3 col-sm-6  ">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h5 class="contador " data-cantidad="500"></h5>
+                                <span>k</span>
+                            </div>
                             <p>Compras</p>
                         </div>
-                        <div class="col-lg-3 col-sm-6 ">
-                            <h5>+30K</h5>
+                        <div class="contador-container show-number   col-lg-3 col-sm-6  ">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h5 class="contador " data-cantidad="30"></h5>
+                                <span>k</span>
+                            </div>
                             <p>Alumnos</p>
                         </div>
                     </div>
@@ -705,7 +716,9 @@
                     </li>
                 </ul>
             </div>
-
+            <a href="#" class="go-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
         </section>
     </main>
     <footer class="footer bg-negro py-5 ">
