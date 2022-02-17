@@ -44,10 +44,6 @@
     font-weight: 400;
 }
 
-.text-green-evulus {
-    color: $color-principal;
-}
-
 
 /* --------------------- VID YOUTUBE -------------------- */
 
@@ -79,10 +75,11 @@
     text-align: center;
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(8, 144, 122, 1) 10%, rgba(8, 144, 122, 1) 50%, rgba(8, 144, 122, 1) 90%, rgba(255, 255, 255, 1) 100%);
-    padding: 0rem 0px 1rem;
+    padding: 0rem 2rem 1rem;
     h2 {
         color: $color-secundario;
         font-size: $font-title;
+        margin: 0;
         font-weight: 400;
     }
 }
@@ -96,49 +93,15 @@
     margin: 0 auto;
 }
 
-@media screen and (min-width:1200px) {
-    .container-evulus {
-        padding: 60px 70px;
-    }
+
+/* ------------------------ OTHER ----------------------- */
+
+.text-green-evulus {
+    color: $color-principal;
 }
 
-@media screen and (min-width:992px) and (max-width:1200px) {
-    .container-evulus {
-        padding: 80px 60px;
-    }
-    .subtitle {
-        h2 {
-            font-size: 3rem;
-        }
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:992px) {
-    .container-evulus {
-        padding: 80px 40px;
-    }
-    .subtitle {
-        h2 {
-            font-size: 2.5rem;
-        }
-    }
-}
-
-@media screen and (min-width:176px) and (max-width:768px) {
-    .container-evulus {
-        padding: 80px 20px;
-    }
-    .w-80 {
-        width: 90%;
-    }
-    .w-70 {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .subtitle {
-        padding: 0px 0px .3rem;
-        h2 {
-            font-size: 1.5rem;
-        }
-    }
+@mixin f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

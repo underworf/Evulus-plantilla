@@ -3,6 +3,7 @@
 /* ---------------------- FONT-SIZE --------------------- */
 /* --------------------- TRANSITION --------------------- */
 /* --------------------- BOX-SHADOWS -------------------- */
+/* ----------------------- BORDER ----------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
@@ -136,10 +137,6 @@ section {
   font-weight: 400;
 }
 
-.text-green-evulus {
-  color: #08907a;
-}
-
 /* --------------------- VID YOUTUBE -------------------- */
 .vid-youtube-responsive {
   height: 0;
@@ -167,11 +164,12 @@ section {
   text-align: center;
   background: white;
   background: linear-gradient(90deg, white 0%, #08907a 10%, #08907a 50%, #08907a 90%, white 100%);
-  padding: 0rem 0px 1rem;
+  padding: 0rem 2rem 1rem;
 }
 .subtitle h2 {
   color: #ffffff;
   font-size: 3.7rem;
+  margin: 0;
   font-weight: 400;
 }
 
@@ -182,74 +180,70 @@ section {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1200px) {
-  .container-evulus {
-    padding: 60px 70px;
-  }
+/* ------------------------ OTHER ----------------------- */
+.text-green-evulus {
+  color: #08907a;
 }
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .container-evulus {
-    padding: 80px 60px;
-  }
 
-  .subtitle h2 {
-    font-size: 3rem;
-  }
+.slider-1 {
+  overflow: hidden;
+  z-index: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .container-evulus {
-    padding: 80px 40px;
-  }
 
-  .subtitle h2 {
-    font-size: 2.5rem;
-  }
+.carousel-wrap {
+  margin: 90px auto;
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
 }
-@media screen and (min-width: 176px) and (max-width: 768px) {
-  .container-evulus {
-    padding: 80px 20px;
-  }
 
-  .w-80 {
-    width: 90%;
-  }
-
-  .w-70 {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .subtitle {
-    padding: 0px 0px 0.3rem;
-  }
-  .subtitle h2 {
-    font-size: 1.5rem;
-  }
+.owl-carousel {
+  z-index: 0;
 }
-/* --------------------- BTN-EVULUS --------------------- */
-.btn-white {
-  width: 220px;
-  min-height: 67px;
-  background: #ffffff;
-  padding: 0.5rem 1rem;
+
+.owl-carousel .item {
+  position: relative;
+  z-index: 100;
+  margin: 0 auto;
+  width: 160px;
+  color: #08907a;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+}
+.owl-carousel .item img {
+  margin: 0 auto;
+}
+
+.owl-nav > button {
+  margin-top: -26px;
+  position: absolute;
+  top: 30%;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: #ffffff;
+  background: transparent !important;
+}
+
+.owl-nav svg {
+  font-size: 52px;
+  color: #878687;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+
+.owl-carousel .owl-stage {
   display: flex;
   align-items: center;
-  box-shadow: 0px 0.5rem 1rem #b4b4b4;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-.btn-white:hover {
-  background: #f2f2f2;
 }
 
+/* --------------------- BTN-EVULUS-YELLOW--------------------- */
 .btn-evulus {
   width: auto;
   padding: 1rem 1.8rem 20px;
@@ -306,6 +300,8 @@ section {
 }
 .btn-evulus-medium:hover {
   background: #e0a800;
+  color: black !important;
+  text-decoration: none !important;
 }
 .btn-evulus-medium:active {
   background: #d39e00;
@@ -339,10 +335,59 @@ section {
 }
 .btn-evulus-small:hover {
   background: #e0a800;
-  color: black;
+  color: black !important;
+  text-decoration: none !important;
 }
 .btn-evulus-small:active {
   background: #d39e00;
+}
+
+/* ------------------ BTN-EVULUS-WHITE ------------------ */
+.btn-white-tall {
+  width: 300px;
+  min-height: 67px;
+  background: #ffffff;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0.5rem 1rem #b4b4b4;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 136px;
+}
+.btn-white-tall:hover {
+  background: #f2f2f2;
+}
+
+.btn-white-medium {
+  width: 220px;
+  min-height: 67px;
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0.5rem 1rem #b4b4b4;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.btn-white-medium:hover {
+  background: #f2f2f2;
 }
 
 /* ----------------------- BTN NAV ---------------------- */
@@ -474,6 +519,13 @@ section {
 .social-icons--white li a img {
   filter: brightness(0) invert(100%);
   -webkit-filter: brightness(0) invert(100%);
+  width: 70px;
+  height: 70px;
+}
+
+.social-icons--black li a img {
+  filter: brightness(0);
+  -webkit-filter: brightness(0);
   width: 70px;
   height: 70px;
 }
@@ -678,28 +730,6 @@ section {
 .evulus .row .evulus__content .evulus-items {
   gap: 20px;
 }
-.evulus .row .evulus__content .evulus-items li {
-  width: 220px;
-  min-height: 67px;
-  background: #ffffff;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 0.5rem 1rem #b4b4b4;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-.evulus .row .evulus__content .evulus-items li:hover {
-  background: #f2f2f2;
-}
 .evulus .row .evulus__img {
   position: relative;
   right: -30px;
@@ -730,6 +760,7 @@ section {
 .platform .platform-text-item div {
   font-size: 2rem;
   font-weight: 400;
+  line-height: 30px;
 }
 .platform .platform-text-item div img {
   width: 45px;
@@ -838,20 +869,26 @@ section {
   margin: 10px 10px 0px 0px;
 }
 .evu-contract .copy-contract {
-  margin: 20px 0px;
   display: flex;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 .evu-contract .copy-contract .clipboard {
   width: 100%;
   background: transparent;
   font-size: 1rem;
   user-select: none;
+  overflow: hidden;
 }
 .evu-contract .copy-contract .copy {
   background: #ffbe1b;
-  font-size: 0.8rem;
+  font-size: 12px;
   padding: 0 5px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 /* -------------------- EVU GRAPCHICS -------------------- */
@@ -876,67 +913,7 @@ section {
   padding: 80px 0px;
 }
 .exchanges__content__populate a {
-  display: flex;
-  align-items: center;
-  height: 136px;
-  padding: 2rem;
-  width: 300px;
-  background: #ffffff;
-  box-shadow: 0px 0.5rem 1rem #b4b4b4;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   margin: 20px;
-}
-
-.carousel-wrap {
-  margin: 90px auto;
-  padding: 0 5%;
-  width: 80%;
-  position: relative;
-}
-
-/* fix blank or flashing items on carousel */
-.owl-carousel .item {
-  position: relative;
-  z-index: 100;
-  -webkit-backface-visibility: hidden;
-}
-
-/* end fix */
-.owl-nav > button {
-  margin-top: -26px;
-  position: absolute;
-  top: 30%;
-}
-
-.owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ffffff;
-  background: transparent !important;
-}
-
-.owl-nav i {
-  font-size: 52px;
-  color: #878687;
-}
-
-.owl-nav .owl-prev {
-  left: -30px;
-}
-
-.owl-nav .owl-next {
-  right: -30px;
-}
-
-.owl-carousel .owl-stage {
-  display: flex;
-  align-items: center;
-}
-
-#owl-carousel .owl-stage {
-  padding: 0px 0px 0px 60px;
 }
 
 /* ----------------------- SERVICE ---------------------- */
@@ -951,8 +928,8 @@ section {
 .service .service-items a {
   width: calc(100% / 4 - 40px);
   min-width: 270px;
-  height: 170px;
-  padding: 15px;
+  padding: 30px;
+  max-height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -983,7 +960,7 @@ section {
 }
 .service .service-team__text p {
   font-size: 1rem;
-  margin: 20px;
+  font-weight: 600;
   margin: 20px auto;
 }
 .service .card-member {
@@ -999,7 +976,7 @@ section {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border: 15px solid #08907a;
-  box-shadow: 0px 0px 0px 10px #c1e3de;
+  box-shadow: 0px 0px 0px 7px #68cdc4;
   width: 60%;
   margin-bottom: 10px;
 }
@@ -1012,12 +989,20 @@ section {
   font-size: 1.2rem;
   margin: 0;
 }
-.service .card-member .member-redes a {
+.service .card-member .member-redes a,
+.service .card-member svg {
   display: inline-block;
   color: #08907a;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  margin: 0px 3px 0px 3px;
 }
-.service .card-member .member-redes a:hover {
+.service .card-member .member-redes a:hover,
+.service .card-member svg:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -1035,7 +1020,7 @@ section {
 }
 .service .members-cards-line-2 .card-member img {
   border: 10px solid #08907a;
-  box-shadow: 0px 0px 0px 5px #c1e3de;
+  box-shadow: 0px 0px 0px 6px #68cdc4;
 }
 
 /* ---------------------- ROAD MAP ---------------------- */
@@ -1059,17 +1044,6 @@ section {
   width: 150px;
 }
 
-.slider-1 {
-  overflow: hidden;
-  z-index: 0;
-}
-
-.item.item--slider {
-  width: 160px;
-  color: #08907a;
-  text-align: center;
-}
-
 /* ----------------------- CONTACT ---------------------- */
 .contact {
   color: #ffffff;
@@ -1084,11 +1058,12 @@ section {
   align-items: center;
   justify-content: center;
 }
-.contact__content p {
+.contact__content h3 {
   font-size: 2rem;
-  padding: 0;
+  margin: 0;
+  font-weight: 400;
 }
-.contact__content p:nth-child(2) {
+.contact__content h2 {
   font-size: 3rem;
   font-weight: 500;
 }
@@ -1108,6 +1083,66 @@ section {
   width: 20px;
   height: 20px;
   margin: 0px 10px 0px 0px;
+}
+.footer__content a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+@media screen and (min-width: 1200px) {
+  .container-evulus {
+    padding: 60px 70px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .container-evulus {
+    padding: 80px 60px;
+  }
+
+  .subtitle h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container-evulus {
+    padding: 80px 40px;
+  }
+
+  .subtitle h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-evulus {
+    padding: 80px 20px;
+  }
+
+  .w-80 {
+    width: 90%;
+  }
+
+  .w-70 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .subtitle {
+    padding: 0px 2rem 0.3rem;
+  }
+  .subtitle h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-icons--black li a img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .owl-carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

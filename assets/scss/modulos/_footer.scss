@@ -16,5 +16,9 @@
                 margin: 0px 10px 0px 0px;
             }
         }
+        a:hover {
+            color: $color-secundario;
+            text-decoration: underline;
+        }
     }
 }

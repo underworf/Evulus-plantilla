@@ -27,3 +27,12 @@
         height: 70px;
     }
 }
+
+.social-icons--black {
+    li a img {
+        filter: brightness(0);
+        -webkit-filter: brightness(0);
+        width: 70px;
+        height: 70px;
+    }
+}

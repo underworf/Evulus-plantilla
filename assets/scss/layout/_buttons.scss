@@ -1,4 +1,4 @@
-/* --------------------- BTN-EVULUS --------------------- */
+/* --------------------- BTN-EVULUS-YELLOW--------------------- */
 
 @mixin btn-personalizado($bg, $padding, $weight, $font-size) {
     width: $weight;
@@ -22,35 +22,8 @@
     display: inline-block;
     white-space: nowrap;
     &:focus {
-        border: none
+        border: none;
     }
-}
-
-@mixin btn-white-tall {
-    width: 220px;
-    min-height: 67px;
-    background: $color-secundario;
-    padding: .5rem 1rem;
-    display: flex;
-    align-items: center;
-    box-shadow: $box-shadow-primario;
-    transition: $transition-all;
-    -webkit-transition: $transition-all;
-    -moz-transition: $transition-all;
-    -ms-transition: $transition-all;
-    -o-transition: $transition-all;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    &:hover {
-        background: #f2f2f2;
-    }
-}
-
-.btn-white {
-    @include btn-white-tall;
 }
 
 .btn-evulus {
@@ -64,6 +37,8 @@
     @include btn-personalizado($color-btn, 0px 20px 4px 20px, auto, 1rem);
     &:hover {
         background: #e0a800;
+        color: $color-texo !important;
+        text-decoration: none !important;
     }
     &:active {
         background: #d39e00;
@@ -75,17 +50,47 @@
     margin: 0;
     &:hover {
         background: #e0a800;
-        color: $color-texo;
+        color: $color-texo !important;
+        text-decoration: none !important;
     }
     &:active {
         background: #d39e00;
     }
 }
 
-@mixin f-center {
+
+/* ------------------ BTN-EVULUS-WHITE ------------------ */
+
+@mixin btn-white($weight-w, $padding-p, $radius-br) {
+    width: $weight-w;
+    min-height: 67px;
+    background: $color-secundario;
+    padding: $padding-p;
     display: flex;
-    justify-content: center;
     align-items: center;
+    box-shadow: $box-shadow-primario;
+    transition: $transition-all;
+    -webkit-transition: $transition-all;
+    -moz-transition: $transition-all;
+    -ms-transition: $transition-all;
+    -o-transition: $transition-all;
+    border-radius: $radius-br;
+    -webkit-border-radius: $radius-br;
+    -moz-border-radius: $radius-br;
+    -ms-border-radius: $radius-br;
+    -o-border-radius: $radius-br;
+    &:hover {
+        background: #f2f2f2;
+    }
+}
+
+.btn-white-tall {
+    @include btn-white(300px, 2rem, 10px);
+    height: 136px;
+}
+
+.btn-white-medium {
+    @include btn-white(220px, .5rem 1rem, 5px);
 }
 
 

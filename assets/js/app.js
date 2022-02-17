@@ -1,35 +1,3 @@
-const buttonCopy = document.querySelector('.copy')
-
-buttonCopy.addEventListener('click', () => {
-    const inputPin = document.querySelector('.clipboard')
-
-    var inputFalso = document.createElement('input')
-    inputFalso.setAttribute("value", inputPin.innerHTML)
-    document.body.appendChild(inputFalso)
-    inputFalso.select()
-    document.execCommand('copy')
-    document.body.removeChild(inputFalso)
-
-})
-
-/* ------------------------- LUPA AND MENU------------------------ */
-const textSeach = document.querySelector('.button-search input')
-const buttonSeach = document.querySelector('.button-search button')
-
-textSeach.addEventListener('click', () => {
-    buttonSeach.classList.add('active')
-})
-
-
-
-$('main').on('click', function() {
-    $('.submenu').removeClass('active')
-    buttonSeach.classList.remove('active')
-
-})
-
-
-
 /* ------------------------ MENU ------------------------ */
 
 $('.close').click(function() {
@@ -48,10 +16,6 @@ var windowSize = $(window).width();
 function responsive() {
     var windowSize = $(window).width()
     console.log(windowSize);
-
-
-
-
 
     if (windowSize < 1200) {
         const itemNav = document.createDocumentFragment();
@@ -92,6 +56,41 @@ window.addEventListener('resize', () => {
     responsive()
 })
 
+/* --------------------- COPY BUTTON -------------------- */
+
+
+const buttonCopy = document.querySelector('.copy')
+
+buttonCopy.addEventListener('click', () => {
+    const inputPin = document.querySelector('.clipboard')
+
+    var inputFalso = document.createElement('input')
+    inputFalso.setAttribute("value", inputPin.innerHTML)
+    document.body.appendChild(inputFalso)
+    inputFalso.select()
+    document.execCommand('copy')
+    document.body.removeChild(inputFalso)
+
+})
+
+/* ------------------------- LUPA AND MENU------------------------ */
+const textSeach = document.querySelector('.button-search input')
+const buttonSeach = document.querySelector('.button-search button')
+
+textSeach.addEventListener('click', () => {
+    buttonSeach.classList.add('active')
+})
+
+
+
+$('main').on('click', function() {
+    $('.submenu').removeClass('active')
+    buttonSeach.classList.remove('active')
+
+})
+
+
+
 /* ----------------------- SLIDER ----------------------- */
 $('#owl-carousel').owlCarousel({
     loop: true,
@@ -101,13 +100,13 @@ $('#owl-carousel').owlCarousel({
         0: {
             items: 1
         },
-        350: {
+        500: {
             items: 2
         },
-        500: {
+        700: {
             items: 3
         },
-        700: {
+        800: {
             items: 4,
         },
         1000: {
@@ -126,8 +125,8 @@ $('.owl-carousel').owlCarousel({
     nav: true,
     navText: [
 
-        "<i class='fa-solid fa-angle-left'></i>",
-        "<i class='fa-solid fa-angle-right'></i>",
+        "<i class='far fa-angle-left'></i>",
+        "<i class='far fa-angle-right'></i>",
     ],
     autoplay: true,
     autoplayHoverPause: true,
@@ -135,13 +134,13 @@ $('.owl-carousel').owlCarousel({
         0: {
             items: 1
         },
-        350: {
+        400: {
             items: 2
         },
-        500: {
+        600: {
             items: 3
         },
-        700: {
+        800: {
             items: 4,
         },
         1000: {

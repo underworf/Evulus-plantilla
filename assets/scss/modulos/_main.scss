@@ -24,28 +24,6 @@
             }
             .evulus-items {
                 gap: 20px;
-                li {
-                    width: 220px;
-                    min-height: 67px;
-                    background: $color-secundario;
-                    padding: .5rem 1rem;
-                    display: flex;
-                    align-items: center;
-                    box-shadow: $box-shadow-primario;
-                    transition: $transition-all;
-                    -webkit-transition: $transition-all;
-                    -moz-transition: $transition-all;
-                    -ms-transition: $transition-all;
-                    -o-transition: $transition-all;
-                    border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                    -ms-border-radius: 5px;
-                    -o-border-radius: 5px;
-                    &:hover {
-                        background: #f2f2f2;
-                    }
-                }
             }
         }
         .evulus__img {
@@ -91,6 +69,7 @@
         div {
             font-size: 2rem;
             font-weight: 400;
+            line-height: 30px;
             img {
                 width: 45px;
                 vertical-align: baseline;
@@ -214,19 +193,25 @@
         }
     }
     .copy-contract {
-        margin: 20px 0px;
         display: flex;
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         .clipboard {
             width: 100%;
             background: transparent;
             font-size: 1rem;
             user-select: none;
+            overflow: hidden;
         }
         .copy {
             background: $color-btn;
-            font-size: .8rem;
+            font-size: 12px;
             padding: 0 5px;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
         }
     }
 }
@@ -258,75 +243,9 @@
         padding: 80px 0px;
         &__populate {
             a {
-                display: flex;
-                align-items: center;
-                height: 136px;
-                padding: 2rem;
-                width: 300px;
-                background: $color-secundario;
-                box-shadow: $box-shadow-primario;
-                border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
                 margin: 20px;
             }
         }
-    }
-}
-
-.carousel-wrap {
-    margin: 90px auto;
-    padding: 0 5%;
-    width: 80%;
-    position: relative;
-}
-
-
-/* fix blank or flashing items on carousel */
-
-.owl-carousel .item {
-    position: relative;
-    z-index: 100;
-    -webkit-backface-visibility: hidden;
-}
-
-
-/* end fix */
-
-.owl-nav>button {
-    margin-top: -26px;
-    position: absolute;
-    top: 30%;
-}
-
-.owl-theme .owl-nav [class*='owl-']:hover {
-    color: $color-secundario;
-    background: transparent !important;
-}
-
-.owl-nav i {
-    font-size: 52px;
-    color: #878687;
-}
-
-.owl-nav .owl-prev {
-    left: -30px;
-}
-
-.owl-nav .owl-next {
-    right: -30px;
-}
-
-.owl-carousel .owl-stage {
-    display: flex;
-    align-items: center;
-}
-
-#owl-carousel {
-    .owl-stage {
-        padding: 0px 0px 0px 60px;
     }
 }
 
@@ -344,8 +263,8 @@
         a {
             width: calc(100% / 4 - 40px);
             min-width: 270px;
-            height: 170px;
-            padding: 15px;
+            padding: 30px;
+            max-height: 180px;
             @include f-center;
             flex-direction: column;
             font-size: 2rem;
@@ -376,11 +295,11 @@
     }
     .service-team__text {
         h3 {
-            font-size: 3.7rem;
+            font-size: $font-title;
         }
         p {
             font-size: 1rem;
-            margin: 20px;
+            font-weight: 600;
             margin: 20px auto;
         }
     }
@@ -396,7 +315,7 @@
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
             border: 15px solid $color-principal;
-            box-shadow: 0px 0px 0px 10px $bg-color;
+            box-shadow: 0px 0px 0px 7px #68cdc4;
             width: 60%;
             margin-bottom: 10px;
         }
@@ -409,10 +328,17 @@
             font-size: 1.2rem;
             margin: 0;
         }
-        .member-redes a {
+        .member-redes a,
+        svg {
             display: inline-block;
             color: $color-principal;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            transition: $transition-all;
+            -webkit-transition: $transition-all;
+            -moz-transition: $transition-all;
+            -ms-transition: $transition-all;
+            -o-transition: $transition-all;
+            margin: 0px 3px 0px 3px;
             &:hover {
                 transform: scale(1.1);
                 -webkit-transform: scale(1.1);
@@ -435,7 +361,7 @@
             }
             img {
                 border: 10px solid $color-principal;
-                box-shadow: 0px 0px 0px 5px $bg-color;
+                box-shadow: 0px 0px 0px 6px #68cdc4;
             }
         }
     }
@@ -474,17 +400,6 @@
     }
 }
 
-.slider-1 {
-    overflow: hidden;
-    z-index: 0;
-}
-
-.item.item--slider {
-    width: 160px;
-    color: $color-principal;
-    text-align: center;
-}
-
 
 /* ----------------------- CONTACT ---------------------- */
 
@@ -499,13 +414,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        p {
+        h3 {
             font-size: 2rem;
-            padding: 0;
+            margin: 0;
+            font-weight: 400;
         }
-        p:nth-child(2) {
+        h2 {
             font-size: 3rem;
             font-weight: 500;
+            // line-height: 10px;
         }
     }
 }
