@@ -1,10 +1,15 @@
 const buttonCopy = document.querySelector('.copy')
-const inputPin = document.querySelector('.clipboard')
 
 buttonCopy.addEventListener('click', () => {
-    inputPin.focus();
-    document.execCommand('selectAll')
+    const inputPin = document.querySelector('.clipboard')
+
+    var inputFalso = document.createElement('input')
+    inputFalso.setAttribute("value", inputPin.innerHTML)
+    document.body.appendChild(inputFalso)
+    inputFalso.select()
     document.execCommand('copy')
+    document.body.removeChild(inputFalso)
+
 })
 
 /* ------------------------- LUPA AND MENU------------------------ */
@@ -88,10 +93,36 @@ window.addEventListener('resize', () => {
 })
 
 /* ----------------------- SLIDER ----------------------- */
+$('#owl-carousel').owlCarousel({
+    loop: true,
+    dots: false,
+    autoplay: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        350: {
+            items: 2
+        },
+        500: {
+            items: 3
+        },
+        700: {
+            items: 4,
+        },
+        1000: {
+            items: 5,
+        },
+        1200: {
+            items: 6
+        }
+    }
+})
 
 $('.owl-carousel').owlCarousel({
     loop: true,
     dots: false,
+
     nav: true,
     navText: [
 
@@ -111,47 +142,13 @@ $('.owl-carousel').owlCarousel({
             items: 3
         },
         700: {
-            items: 4
+            items: 4,
         },
         1000: {
-            items: 5
+            items: 5,
         },
         1200: {
             items: 7
         }
     }
 })
-
-// $('.owl-carousel').owlCarousel({
-//     nav: true,
-//     margin: 10,
-//     loop: true,
-//     autoWidth: true,
-//     dots: false,
-//     responsive: {
-//         0: {
-//             items: 1
-//         },
-//         992: {
-//             items: 5
-//         },
-//         1000: {
-//             items: 8,
-//             nav: true,
-
-//         }
-//     }
-// })
-
-
-
-
-// var owl = $('.owl-carousel');
-// owl.owlCarousel({
-//     items: 4,
-//     loop: true,
-//     margin: 10,
-//     autoplay: true,
-//     autoplayTimeout: 1000,
-//     autoplayHoverPause: true
-// });

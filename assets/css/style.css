@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* ----------------------- COLORS ----------------------- */
+/* ---------------------- FONT-SIZE --------------------- */
+/* --------------------- TRANSITION --------------------- */
+/* --------------------- BOX-SHADOWS -------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
@@ -109,6 +112,13 @@ section {
   background: #dff0ee;
 }
 
+/* ------------------ BACKGROUND BORDER ----------------- */
+.border-box-green {
+  border: 0 solid #dff0ee;
+  border-width: 25px 0px;
+}
+
+/* ----------------------- WEIGHT ----------------------- */
 .w-70 {
   width: 70%;
   margin: 0 auto;
@@ -130,6 +140,27 @@ section {
   color: #08907a;
 }
 
+/* --------------------- VID YOUTUBE -------------------- */
+.vid-youtube-responsive {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 47%;
+  padding-top: 30px;
+  position: relative;
+}
+.vid-youtube-responsive iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
 /* ---------------------- SUBTITLE ---------------------- */
 .subtitle {
   width: 100%;
@@ -144,6 +175,7 @@ section {
   font-weight: 400;
 }
 
+/* ------------------ .CONTAINER-EVULUS ----------------- */
 .container-evulus {
   padding: 60px 70px;
   max-width: 1500px;
@@ -194,44 +226,41 @@ section {
     font-size: 1.5rem;
   }
 }
-.vid-youtube-responsive {
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 47%;
-  padding-top: 30px;
-  position: relative;
-}
-.vid-youtube-responsive iframe {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-}
-
-/* ------------------ BACKGROUND BORDER ----------------- */
-.border-box-green {
-  border: 0 solid #dff0ee;
-  border-width: 25px 0px;
-}
-
 /* --------------------- BTN-EVULUS --------------------- */
+.btn-white {
+  width: 220px;
+  min-height: 67px;
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0.5rem 1rem #b4b4b4;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.btn-white:hover {
+  background: #f2f2f2;
+}
+
 .btn-evulus {
   width: auto;
   padding: 1rem 1.8rem 20px;
   margin: 0 auto;
   color: black;
   background: #ffbe1b;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
@@ -256,11 +285,11 @@ section {
   margin: 0 auto;
   color: black;
   background: #ffbe1b;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
@@ -288,11 +317,11 @@ section {
   margin: 0 auto;
   color: black;
   background: #ffbe1b;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
@@ -324,11 +353,11 @@ section {
   margin: 0 auto;
   color: black;
   background: #08907a;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   font-weight: 700;
   font-size: 0.9rem;
   text-align: center;
@@ -369,11 +398,11 @@ section {
   margin: 0 auto;
   color: black;
   background: #ffffff;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   font-weight: 700;
   font-size: 0.9rem;
   text-align: center;
@@ -428,11 +457,11 @@ section {
   width: 30px;
   height: 30px;
   margin: 0.5rem;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
 }
 .social-icons li a img:hover {
   transform: scale(1.1);
@@ -484,6 +513,9 @@ section {
 .nav-items-static {
   color: #08907a;
 }
+.nav-items-static .nav-items-satatic__line {
+  border: 1px solid black;
+}
 .nav-items-static .dark-mode {
   color: black;
 }
@@ -501,11 +533,11 @@ section {
 .logginSearch .button-search input {
   width: 0 !important;
   opacity: 0;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   border: 1px solid #08907a;
   font-size: 0.7rem;
   padding: 0.3rem;
@@ -574,16 +606,15 @@ section {
   top: 0;
   right: -375px;
   z-index: 10;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
 }
 .submenu .aside-menu {
   display: flex;
   flex-direction: column;
-  transition: all 1s ease-in-out;
   position: absolute;
   top: 0;
   right: -100%;
@@ -591,10 +622,11 @@ section {
   width: 100%;
   border-left: 1px solid #eeee;
   background: #ffffff;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
   overflow-x: scroll;
 }
 .submenu .aside-menu .close {
@@ -647,18 +679,18 @@ section {
   gap: 20px;
 }
 .evulus .row .evulus__content .evulus-items li {
-  max-width: 220px;
+  width: 220px;
   min-height: 67px;
   background: #ffffff;
   padding: 0.5rem 1rem;
   display: flex;
-  box-shadow: 0px 0.5rem 1rem #b4b4b4;
   align-items: center;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  -o-transition: all 500ms;
+  box-shadow: 0px 0.5rem 1rem #b4b4b4;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -700,7 +732,7 @@ section {
   font-weight: 400;
 }
 .platform .platform-text-item div img {
-  width: 40px;
+  width: 45px;
   vertical-align: baseline;
 }
 
@@ -746,11 +778,11 @@ section {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
 }
 .evu-tokens__content__card ul li a:hover {
   box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.418);
@@ -887,7 +919,7 @@ section {
 
 .owl-nav i {
   font-size: 52px;
-  color: #cdcbcd;
+  color: #878687;
 }
 
 .owl-nav .owl-prev {
@@ -901,6 +933,10 @@ section {
 .owl-carousel .owl-stage {
   display: flex;
   align-items: center;
+}
+
+#owl-carousel .owl-stage {
+  padding: 0px 0px 0px 60px;
 }
 
 /* ----------------------- SERVICE ---------------------- */
@@ -924,11 +960,11 @@ section {
   font-size: 2rem;
   line-height: 30px;
   box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.418);
-  transition: all 300ms;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -980,6 +1016,13 @@ section {
   display: inline-block;
   color: #08907a;
   font-size: 1.2rem;
+}
+.service .card-member .member-redes a:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .service .members-cards-line-2 .card-member img {
   margin-bottom: 5px;

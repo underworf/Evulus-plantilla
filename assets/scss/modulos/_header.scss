@@ -32,6 +32,9 @@
 
 .nav-items-static {
     color: $color-principal;
+    .nav-items-satatic__line {
+        border: 1px solid $color-texo;
+    }
     .dark-mode {
         color: $color-texo;
     }
@@ -48,11 +51,11 @@
         input {
             width: 0!important;
             opacity: 0;
-            transition: all 300ms;
-            -webkit-transition: all 300ms;
-            -moz-transition: all 300ms;
-            -ms-transition: all 300ms;
-            -o-transition: all 300ms;
+            transition: $transition-all;
+            -webkit-transition: $transition-all;
+            -moz-transition: $transition-all;
+            -ms-transition: $transition-all;
+            -o-transition: $transition-all;
             border: 1px solid $color-principal;
             font-size: .7rem;
             padding: .3rem;
@@ -130,15 +133,14 @@
     top: 0;
     right: -375px;
     z-index: 10;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
+    transition: $transition-menu;
+    -webkit-transition: $transition-menu;
+    -moz-transition: $transition-menu;
+    -ms-transition: $transition-menu;
+    -o-transition: $transition-menu;
     .aside-menu {
         display: flex;
         flex-direction: column;
-        transition: all 1s ease-in-out;
         position: absolute;
         top: 0;
         right: -100%;
@@ -146,10 +148,11 @@
         width: 100%;
         border-left: 1px solid #eeee;
         background: $color-secundario;
-        -webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
+        transition: $transition-menu;
+        -webkit-transition: $transition-menu;
+        -moz-transition: $transition-menu;
+        -ms-transition: $transition-menu;
+        -o-transition: $transition-menu;
         overflow-x: scroll;
         .close {
             display: flex;

@@ -16,6 +16,17 @@
     background: $bg-color-ultra-claro;
 }
 
+
+/* ------------------ BACKGROUND BORDER ----------------- */
+
+.border-box-green {
+    border: 0 solid $bg-color-ultra-claro;
+    border-width: 25px 0px;
+}
+
+
+/* ----------------------- WEIGHT ----------------------- */
+
 .w-70 {
     width: 70%;
     margin: 0 auto;
@@ -38,6 +49,29 @@
 }
 
 
+/* --------------------- VID YOUTUBE -------------------- */
+
+.vid-youtube-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 47%;
+    padding-top: 30px;
+    position: relative;
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+    }
+}
+
+
 /* ---------------------- SUBTITLE ---------------------- */
 
 .subtitle {
@@ -48,10 +82,13 @@
     padding: 0rem 0px 1rem;
     h2 {
         color: $color-secundario;
-        font-size: 3.7rem;
+        font-size: $font-title;
         font-weight: 400;
     }
 }
+
+
+/* ------------------ .CONTAINER-EVULUS ----------------- */
 
 .container-evulus {
     padding: 60px 70px;
@@ -104,32 +141,4 @@
             font-size: 1.5rem;
         }
     }
-}
-
-.vid-youtube-responsive {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 47%;
-    padding-top: 30px;
-    position: relative;
-    iframe {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        border-radius: 40px;
-        -webkit-border-radius: 40px;
-        -moz-border-radius: 40px;
-        -ms-border-radius: 40px;
-        -o-border-radius: 40px;
-    }
-}
-
-
-/* ------------------ BACKGROUND BORDER ----------------- */
-
-.border-box-green {
-    border: 0 solid $bg-color-ultra-claro;
-    border-width: 25px 0px;
 }

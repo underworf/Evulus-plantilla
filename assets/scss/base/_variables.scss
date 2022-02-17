@@ -10,4 +10,17 @@ $color-hover:#091c3e;
 $color-texo:black;
 $color-texo-claro:white;
 $color-btn:#ffbe1b;
-// $box-shadow:;
+
+/* ---------------------- FONT-SIZE --------------------- */
+
+$font-title:3.7rem;
+
+/* --------------------- TRANSITION --------------------- */
+
+$transition-all:all 300ms ease-in-out;
+$transition-menu:all 500ms ease-in-out;
+
+/* --------------------- BOX-SHADOWS -------------------- */
+
+$box-shadow-primario:0px .5rem 1rem #b4b4b4;
+$box-shadow-secundario: 0px .5rem 1rem rgba(0, 0, 0, 0.418);
