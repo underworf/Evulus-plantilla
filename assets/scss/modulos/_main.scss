@@ -9,7 +9,7 @@
             flex-direction: column;
             &__text {
                 h1 {
-                    font-size: 4.6rem;
+                    font-size: $font-title;
                     div {
                         display: inline-block;
                     }
@@ -55,7 +55,7 @@
 .crypto-assets {
     .crypto-assets-text {
         p {
-            font-size: 1.5rem;
+            font-size: $text-font-2;
             text-align: justify;
         }
     }
@@ -127,7 +127,7 @@
                         -ms-transition: $transition-all;
                         -o-transition: $transition-all;
                         &:hover {
-                            box-shadow: $box-shadow-secundario;
+                            box-shadow: $box-shadow-hover;
                         }
                     }
                     span {
@@ -183,7 +183,7 @@
         }
         p {
             margin-bottom: 3rem;
-            font-size: 1.5rem;
+            font-size: $text-font-2;
             text-align: justify;
         }
     }
@@ -199,7 +199,7 @@
         .clipboard {
             width: 100%;
             background: transparent;
-            font-size: 1rem;
+            font-size: $text-font-3;
             user-select: none;
             overflow: hidden;
         }
@@ -212,6 +212,45 @@
             -moz-border-radius: 2px;
             -ms-border-radius: 2px;
             -o-border-radius: 2px;
+            position: relative;
+            &:hover {
+                background: #e0a800;
+                &::after {
+                    position: absolute;
+                    content: "copy";
+                    text-align: center;
+                    width: 50px;
+                    height: 20px;
+                    border-radius: $borde-radius-low;
+                    -webkit-border-radius: $borde-radius-low;
+                    -moz-border-radius: $borde-radius-low;
+                    -ms-border-radius: $borde-radius-low;
+                    -o-border-radius: $borde-radius-low;
+                    top: -25px;
+                    transform: translateX(-66%);
+                    background: $color-btn;
+                    -webkit-transform: translateX(-66%);
+                    -moz-transform: translateX(-66%);
+                    -ms-transform: translateX(-66%);
+                    -o-transform: translateX(-66%);
+                    user-select: none;
+                    transition: $transition-all;
+                    -webkit-transition: $transition-all;
+                    -moz-transition: $transition-all;
+                    -ms-transition: $transition-all;
+                    -o-transition: $transition-all;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    top: -10px;
+                    background: $color-btn;
+                    clip-path: polygon(50% 100%, 0 0, 100% 0);
+                    user-select: none;
+                }
+            }
         }
     }
 }
@@ -295,10 +334,10 @@
     }
     .service-team__text {
         h3 {
-            font-size: $font-title;
+            font-size: $font-subtitle;
         }
         p {
-            font-size: 1rem;
+            font-size: $text-font-3;
             font-weight: 600;
             margin: 20px auto;
         }
@@ -404,6 +443,8 @@
 /* ----------------------- CONTACT ---------------------- */
 
 .contact {
+    background: url(../img/bg-end.png) top $color-principal;
+    padding: 80px 0px;
     color: $color-secundario;
     text-align: center;
     position: relative;

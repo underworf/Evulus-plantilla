@@ -264,7 +264,6 @@ section {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   display: inline-block;
-  white-space: nowrap;
 }
 .btn-evulus:focus {
   border: none;
@@ -293,7 +292,6 @@ section {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   display: inline-block;
-  white-space: nowrap;
 }
 .btn-evulus-medium:focus {
   border: none;
@@ -309,7 +307,7 @@ section {
 
 .btn-evulus-small {
   width: auto;
-  padding: 0.5rem 0.5rem 5px;
+  padding: 0.5rem;
   margin: 0 auto;
   color: black;
   background: #ffbe1b;
@@ -327,7 +325,6 @@ section {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   display: inline-block;
-  white-space: nowrap;
   margin: 0;
 }
 .btn-evulus-small:focus {
@@ -412,8 +409,8 @@ section {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   display: inline-block;
-  white-space: nowrap;
   color: #ffffff;
+  margin: 0;
   border: 1px solid #08907a;
 }
 .btn-1:focus,
@@ -530,11 +527,6 @@ section {
   height: 70px;
 }
 
-.navbar {
-  background: #ffffff;
-  border-bottom: 1px solid #e0e3eb;
-}
-
 .nav-evulus {
   position: fixed;
   top: 0;
@@ -543,7 +535,7 @@ section {
   display: flex;
   background: #ffffff;
   align-items: center;
-  border-bottom: 1px solid #e0e3eb;
+  box-shadow: 0px 2px 5px 0px #cdcccf;
   min-height: 61px;
 }
 
@@ -558,21 +550,28 @@ section {
 .nav-modificacion__menu,
 .nav-items-static,
 .logginSearch,
-.aside-menu {
+.buttons-loggin {
   gap: 20px;
 }
 
-.nav-items-static {
-  color: #08907a;
-}
-.nav-items-static .nav-items-satatic__line {
-  border: 1px solid black;
+.nav-items-static .lang {
+  border-right: 1px solid #7f7f7f;
+  padding-right: 20px;
 }
 .nav-items-static .dark-mode {
-  color: black;
+  color: #cdcccf;
 }
-.nav-items-static span {
+.nav-items-static .dark-mode:hover {
+  color: #7f7f7f;
+}
+.nav-items-static span,
+.nav-items-static div {
   cursor: pointer;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
 }
 
 .logginSearch {
@@ -607,11 +606,18 @@ section {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  border: 1px solid #08907a;
+  border: none;
   color: #08907a;
-  background: #ffffff;
+  background: #cdcccf;
   z-index: 1;
-  padding: 0px 5px;
+  padding: 1px 5px;
+}
+.logginSearch .button-search button svg {
+  transform: translateY(-2px) rotate(90deg);
+  -webkit-transform: translateY(-2px) rotate(90deg);
+  -moz-transform: translateY(-2px) rotate(90deg);
+  -ms-transform: translateY(-2px) rotate(90deg);
+  -o-transform: translateY(-2px) rotate(90deg);
 }
 .logginSearch .button-search button.active {
   background: #08907a !important;
@@ -631,26 +637,6 @@ section {
   border: 1px solid #08907a;
 }
 
-@media screen and (max-width: 1199px) {
-  .logginSearch {
-    flex-direction: column;
-  }
-  .logginSearch .button-search {
-    width: 100%;
-  }
-  .logginSearch .button-search input {
-    width: 100% !important;
-    opacity: 1;
-  }
-}
-@media screen and (max-width: 767px) {
-  .nav_principal {
-    flex-direction: column;
-  }
-  .nav_principal li {
-    width: 100%;
-  }
-}
 .submenu {
   width: 375px;
   height: 100%;
@@ -658,11 +644,11 @@ section {
   top: 0;
   right: -375px;
   z-index: 10;
-  transition: all 500ms ease-in-out;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  -webkit-transition: all 800ms ease-in-out;
+  -moz-transition: all 800ms ease-in-out;
+  -ms-transition: all 800ms ease-in-out;
+  -o-transition: all 800ms ease-in-out;
 }
 .submenu .aside-menu {
   display: flex;
@@ -674,17 +660,35 @@ section {
   width: 100%;
   border-left: 1px solid #eeee;
   background: #ffffff;
-  transition: all 500ms ease-in-out;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  -webkit-transition: all 800ms ease-in-out;
+  -moz-transition: all 800ms ease-in-out;
+  -ms-transition: all 800ms ease-in-out;
+  -o-transition: all 800ms ease-in-out;
   overflow-x: scroll;
 }
 .submenu .aside-menu .close {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+}
+.submenu .aside-menu .close:hover {
+  color: #08907a;
+}
+.submenu .aside-menu .btn-evulus-green {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: start;
+}
+.submenu .aside-menu .nav_principal {
+  gap: 0;
+}
+.submenu .aside-menu .logginSearch {
+  margin-bottom: 20px;
+}
+.submenu .aside-menu .nav-items-static {
+  margin-top: 20px;
 }
 
 .submenu.active {
@@ -698,11 +702,6 @@ section {
   right: 0;
 }
 
-@media screen and (max-width: 385px) {
-  .submenu {
-    width: 100%;
-  }
-}
 /* ----------------------- EVULUS ----------------------- */
 .evulus {
   background: url(../img/mapabg.svg) no-repeat top;
@@ -816,7 +815,7 @@ section {
   -o-transition: all 300ms ease-in-out;
 }
 .evu-tokens__content__card ul li a:hover {
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.418);
+  box-shadow: 0px 0px 10px 3px #cdcccf;
 }
 .evu-tokens__content__card ul li span {
   position: relative;
@@ -889,6 +888,45 @@ section {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  position: relative;
+}
+.evu-contract .copy-contract .copy:hover {
+  background: #e0a800;
+}
+.evu-contract .copy-contract .copy:hover::after {
+  position: absolute;
+  content: "copy";
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  top: -25px;
+  transform: translateX(-66%);
+  background: #ffbe1b;
+  -webkit-transform: translateX(-66%);
+  -moz-transform: translateX(-66%);
+  -ms-transform: translateX(-66%);
+  -o-transform: translateX(-66%);
+  user-select: none;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+.evu-contract .copy-contract .copy:hover::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  background: #ffbe1b;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  user-select: none;
 }
 
 /* -------------------- EVU GRAPCHICS -------------------- */
@@ -1046,6 +1084,8 @@ section {
 
 /* ----------------------- CONTACT ---------------------- */
 .contact {
+  background: url(../img/bg-end.png) top #08907a;
+  padding: 80px 0px;
   color: #ffffff;
   text-align: center;
   position: relative;
@@ -1104,7 +1144,36 @@ section {
     font-size: 3rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
+  .logginSearch {
+    flex-direction: column;
+  }
+  .logginSearch .button-search {
+    width: 100%;
+  }
+  .logginSearch .button-search input {
+    width: 100% !important;
+    opacity: 1;
+  }
+  .logginSearch .button-search button {
+    background: #08907a;
+    color: #ffffff;
+  }
+
+  .btn-1,
+.btn-2 {
+    min-width: 110px;
+  }
+
+  .btn-evulus-green {
+    text-align: start;
+  }
+  .btn-evulus-green svg {
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 992px) {
   .container-evulus {
     padding: 80px 40px;
   }
@@ -1113,7 +1182,15 @@ section {
     font-size: 2.5rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .nav_principal {
+    flex-direction: column;
+  }
+  .nav_principal li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
   .container-evulus {
     padding: 80px 20px;
   }
@@ -1128,7 +1205,7 @@ section {
   }
 
   .subtitle {
-    padding: 0px 2rem 0.3rem;
+    padding: 0rem 2rem 0.3rem;
   }
   .subtitle h2 {
     font-size: 1.5rem;
@@ -1142,6 +1219,25 @@ section {
   .owl-carousel {
     width: 80%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .crypto-assets .crypto-assets-text p {
+    font-size: 1.2rem;
+  }
+
+  .evu-contract .contract__text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-evulus {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 385px) {
+  .submenu {
+    width: 100%;
   }
 }
 

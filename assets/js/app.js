@@ -2,10 +2,12 @@
 
 $('.close').click(function() {
     $('.submenu').removeClass('active')
+    $('.aside-menu').removeClass('active')
 })
 
 $('.menu-burguer').click(function() {
     $('.submenu').addClass('active')
+    $('.aside-menu').addClass('active')
 
 })
 
@@ -17,10 +19,10 @@ function responsive() {
     var windowSize = $(window).width()
     console.log(windowSize);
 
-    if (windowSize < 1200) {
+    if (windowSize <= 1200) {
         const itemNav = document.createDocumentFragment();
         itemNav.appendChild(document.querySelector('.logginSearch'));
-        document.getElementById('aside-menu').appendChild(itemNav);
+        document.getElementById('items-submenu').appendChild(itemNav);
     } else {
         const itemNav = document.createDocumentFragment();
         itemNav.appendChild(document.querySelector('.logginSearch'));
@@ -28,10 +30,10 @@ function responsive() {
     }
 
 
-    if (windowSize < 768) {
+    if (windowSize <= 767) {
         const itemNavLeft = document.createDocumentFragment();
         itemNavLeft.appendChild(document.querySelector('.nav_principal'));
-        document.getElementById('aside-menu').appendChild(itemNavLeft);
+        document.getElementById('items-submenu').appendChild(itemNavLeft);
 
         const itemNav = document.createDocumentFragment();
         itemNav.appendChild(document.querySelector('.nav-items-static'));
@@ -49,7 +51,7 @@ function responsive() {
 
 
 
-if (windowSize < 1200) {
+if (windowSize <= 1200) {
     responsive()
 }
 window.addEventListener('resize', () => {
