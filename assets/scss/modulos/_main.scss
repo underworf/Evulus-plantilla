@@ -75,6 +75,9 @@
                 vertical-align: baseline;
             }
         }
+        p {
+            font-size: $text-font-2;
+        }
     }
 }
 
@@ -100,6 +103,7 @@
                     position: relative;
                     & span {
                         color: $color-principal;
+                        font-size: 1.2rem;
                         font-weight: 900;
                         &::before {
                             font: var(--fa-font-solid);
@@ -109,6 +113,7 @@
                     }
                     p {
                         margin: 0;
+                        font-size: 1.2rem;
                     }
                     a {
                         position: absolute;

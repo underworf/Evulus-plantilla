@@ -195,6 +195,7 @@ const iniciarConteo = elementos => {
     elementos.forEach(elemento => {
         if (elemento.isIntersecting) {
 
+
             let container = document.querySelectorAll('.contador-container')
             container.forEach(item => {
                 item.classList.add('animation-number')
@@ -213,3 +214,39 @@ const elementosHTML = document.querySelectorAll('.contador')
 elementosHTML.forEach(containerContador => {
     observador.observe(containerContador)
 })
+
+
+/* ------------------ LOTTIE ANIMATION ------------------ */
+
+
+contentGraphics = document.querySelector('.animation-graphics')
+
+let animationStatic = bodymovin.loadAnimation({
+    container: contentGraphics,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'stadistica.json'
+});
+
+
+const animationInit = (entradas, observador2) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            animationStatic.play()
+        }
+    })
+}
+
+// // 
+
+
+
+
+const observador1 = new IntersectionObserver(animationInit, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.75
+})
+
+observador1.observe(contentGraphics)
