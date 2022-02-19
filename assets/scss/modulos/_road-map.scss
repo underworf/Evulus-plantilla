@@ -12,6 +12,7 @@
     z-index: 0;
     .bg-small-svg {
         display: none;
+        user-select: none;
     }
     .item-2018 {
         grid-column: 1/3;
